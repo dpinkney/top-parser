@@ -8,30 +8,37 @@ import argparse
 import os
 import sys
 
-__author__ = 'David Oreper'
+from top_entry import TopEntry, Job
 
-class TopParser:
+__author__ = 'Dave Pinkney'
 
-    def __init__(self, arg1):
-        """
-        """
-
-
-class FileParser:
+class TopParser(object):
 
     def __init__(self, fileName):
         """
         """
         self.fileName = fileName
+        self.entries = []
 
     def parse(self):
-        log("Parsing file %s" % self.fileName)
+        LOG("Parsing file %s" % self.fileName)
 
         # Parse the file
         # Pass output sequence from top to TopParser
+        with open(self.fileName, 'r') as f:
+            topEntry = TopEntry().parse(f)
+            self.entries.append(topEntry)
+            
+        LOG("Parsed {0} entries.".format(len(self.entries)))
+            
+    def parseEntry(self, f):
+        """
+        :type f - File of top output
+        :return: a TopEntry instance
+        """
+        read_data = f.read()
 
-
-def log(message):
+def LOG(message):
     """ Print the given message """
     if verbose:
         print "LOG: %s" % message
@@ -52,11 +59,10 @@ def main(argv):
     global verbose
     verbose = options.verbose
 
-    log("Got options: %s" % options)
+    LOG("Got options: %s" % options)
 
-
-    fileParser = FileParser(options.fileName)
-    fileParser.parse()
+    topParser = TopParser(options.fileName)
+    topParser.parse()
 
 
 if __name__ == "__main__":
