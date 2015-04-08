@@ -1,13 +1,26 @@
+import logging
 import re
 
 __author__ = 'Dave Pinkney'
+
+logger = logging.getLogger(__name__)
 
 class TopEntry(object):
     """
     This class represents the output from one iteration of top.
     It will read top output from a file and initialize itself from it.
     """
-    RE_UPTIME = re.compile("top - ([\d:]+) up (\d+) days, ([\d:]+), (\d+) users,\s+load average: ([\d.]+), ([\d.]+), ([\d.]+)")
+
+    # Header Field Names
+    TIME_OF_DAY = "timeOfDay"                      # string
+    UPTIME_MINUTES = "uptimeMinutes"               # int
+    NUM_USERS = "numUsers"                         # int
+    LOAD_ONE_MINUTE = "1 minute load"              # float
+    LOAD_5_MINUTES = "5 minute load"               # float
+    LOAD_15_MINUTES = "15 minute load"             # float
+
+    # Regular Expressions
+    RE_UPTIME = re.compile("top - ([\d:]+) up (\d+) days, (\d+):(\d+), (\d+) users,\s+load average: ([\d.]+), ([\d.]+), ([\d.]+)")
 
     def __init__(self):
         """
@@ -15,13 +28,18 @@ class TopEntry(object):
         self.header = {}
         self.jobs = {}
 
+    def __str__(self):
+        """Convert to string, for str()."""
+        return "Header = {0}, Jobs = {1}".format(self.header, self.jobs)
+
     def parse(self, f):
         """
         Reads a top entry from f and initializes this object from it.
         :throws: Exception if at EOF
         """
-        self.header = self.parseHeader(f)
-        self.jobs = self.parseBody(f)
+        self.parseHeader(f)
+        self.parseBody(f)
+        logger.debug("Parsed entry: {0}".format(self))
 
     def parseHeader(self, f):
         """
@@ -42,16 +60,22 @@ class TopEntry(object):
         self.parseMem(self.readline(f))
         self.parseSwap(self.readline(f))
 
-
     def parseUptime(self, line):
         """
         Parse uptime state out of a String with the following format:
         top - 05:58:39 up 27 days, 16:32, 17 users,  load average: 0.01, 0.04, 0.05
         """
-        LOG("Parsing uptime from '%s'" % line)
-        groups = RE_UPTIME.match(line)
-        LOG("Got groups: " + groups)
-        
+        logger.debug("Parsing uptime from '{0}'".format(line))
+        match = self.RE_UPTIME.match(line)
+        groups = match.groups()
+        logger.debug("Got groups: {0}".format(groups))
+
+        self.header[self.TIME_OF_DAY] = groups[0]
+        self.header[self.UPTIME_MINUTES] = int(groups[1]) * (24 * 60) + int(groups[2]) * 60 + int(groups[3])
+        self.header[self.NUM_USERS] = int(groups[4])
+        self.header[self.LOAD_ONE_MINUTE] = float(groups[5])
+        self.header[self.LOAD_5_MINUTES] = float(groups[6])
+        self.header[self.LOAD_15_MINUTES] = float(groups[7])
 
     def parseTasks(self, line):
         pass

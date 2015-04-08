@@ -5,12 +5,15 @@ It expects to be fed the output corresponding to one iteration of top.
 """
 
 import argparse
+import logging
 import os
 import sys
 
 from top_entry import TopEntry, Job
 
 __author__ = 'Dave Pinkney'
+
+logger = logging.getLogger(__name__)
 
 class TopParser(object):
 
@@ -21,7 +24,7 @@ class TopParser(object):
         self.entries = []
 
     def parse(self):
-        LOG("Parsing file %s" % self.fileName)
+        logger.debug("Parsing file {0}".format(self.fileName))
 
         # Parse the file
         # Pass output sequence from top to TopParser
@@ -29,7 +32,7 @@ class TopParser(object):
             topEntry = TopEntry().parse(f)
             self.entries.append(topEntry)
             
-        LOG("Parsed {0} entries.".format(len(self.entries)))
+        logger.info("Parsed {0} entries from {1}".format(len(self.entries), self.fileName))
             
     def parseEntry(self, f):
         """
@@ -37,11 +40,6 @@ class TopParser(object):
         :return: a TopEntry instance
         """
         read_data = f.read()
-
-def LOG(message):
-    """ Print the given message """
-    if verbose:
-        print "LOG: %s" % message
 
 def main(argv):
     examples = """
@@ -56,10 +54,14 @@ def main(argv):
     parser.add_argument("-v", "--verbose", action='store_true', help="True to enable verbose logging mode")
     options = parser.parse_args(argv)
 
-    global verbose
-    verbose = options.verbose
+    if options.verbose:
+        logLevel = logging.DEBUG
+    else:
+        logLevel = logging.INFO
 
-    LOG("Got options: %s" % options)
+    logging.basicConfig(level=logLevel)
+        
+    logger.debug("Got options: {0}".format(options))
 
     topParser = TopParser(options.fileName)
     topParser.parse()
