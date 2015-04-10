@@ -15,12 +15,16 @@ class TopEntry(object):
     TIME_OF_DAY = "timeOfDay"                      # string
     UPTIME_MINUTES = "uptimeMinutes"               # int
     NUM_USERS = "numUsers"                         # int
-    LOAD_ONE_MINUTE = "1 minute load"              # float
+    LOAD_1_MINUTE = "1 minute load"              # float
     LOAD_5_MINUTES = "5 minute load"               # float
     LOAD_15_MINUTES = "15 minute load"             # float
 
     # Regular Expressions
-    RE_UPTIME = re.compile("top - ([\d:]+) up (\d+) days, (\d+):(\d+), (\d+) users,\s+load average: ([\d.]+), ([\d.]+), ([\d.]+)")
+    # Uptime has variable time unit output, might be days, minutes, or just hours:min
+    RE_UPTIME = re.compile('top - ([\d:]+) up\s+(\d+ days?, \d+:\d+|\d+ mins?|\d+:\d+),\s+(\d+) users?,\s+load average: ([\d.]+), ([\d.]+), ([\d.]+)')
+    RE_UPTIME_DAYS = re.compile('(\d+)\s+days?,\s+(\d+):(\d+)')
+    RE_UPTIME_HOUR = re.compile('(\d+):(\d+)')
+    RE_UPTIME_MIN = re.compile('(\d+)\s+mins?')
 
     def __init__(self):
         """
@@ -62,8 +66,10 @@ class TopEntry(object):
 
     def parseUptime(self, line):
         """
-        Parse uptime state out of a String with the following format:
+        Parse uptime state out of a string.  The string format can be one of:
         top - 05:58:39 up 27 days, 16:32, 17 users,  load average: 0.01, 0.04, 0.05
+        top - 10:53:52 up 2 min,  1 user,  load average: 0.21, 0.16, 0.06
+        top - 11:51:42 up  1:00,  1 user,  load average: 0.00, 0.01, 0.05
         """
         logger.debug("Parsing uptime from '{0}'".format(line))
         match = self.RE_UPTIME.match(line)
@@ -71,11 +77,43 @@ class TopEntry(object):
         logger.debug("Got groups: {0}".format(groups))
 
         self.header[self.TIME_OF_DAY] = groups[0]
-        self.header[self.UPTIME_MINUTES] = int(groups[1]) * (24 * 60) + int(groups[2]) * 60 + int(groups[3])
-        self.header[self.NUM_USERS] = int(groups[4])
-        self.header[self.LOAD_ONE_MINUTE] = float(groups[5])
-        self.header[self.LOAD_5_MINUTES] = float(groups[6])
-        self.header[self.LOAD_15_MINUTES] = float(groups[7])
+        self.header[self.UPTIME_MINUTES] = self.parseUptimeMinutes(groups[1])
+        self.header[self.NUM_USERS] = int(groups[2])
+        self.header[self.LOAD_1_MINUTE] = float(groups[3])
+        self.header[self.LOAD_5_MINUTES] = float(groups[4])
+        self.header[self.LOAD_15_MINUTES] = float(groups[5])
+
+    def parseUptimeMinutes(self, uptimeStr):
+        """
+        Parse the uptime minutes.  Uptime unit may vary from seconds to minutes, hour and days.
+        Example:
+        '27 days, 16:32'
+        '1:00'
+        '2 min'
+        """
+        match = self.RE_UPTIME_DAYS.match(uptimeStr)
+        if match:
+            groups = match.groups()
+            logger.debug("Parsed groups: {0}".format(groups))
+            minutes = int(groups[0]) * 24 * 60 + int(groups[1]) * 60 + int(groups[2])
+        else:
+            match = self.RE_UPTIME_HOUR.match(uptimeStr)
+            if match:
+                groups = match.groups()
+                logger.debug("Parsed groups: {0}".format(groups))
+                minutes = int(groups[0]) * 60 + int(groups[1])
+            else:
+                match = self.RE_UPTIME_MIN.match(uptimeStr)
+                groups = match.groups()
+                logger.debug("Parsed groups: {0}".format(groups))
+                minutes = int(groups[0])
+
+        logger.debug("Parsed minutes of {0} from {1}".format(minutes, uptimeStr))
+        return minutes
+
+
+
+
 
     def parseTasks(self, line):
         pass
@@ -115,4 +153,3 @@ class Job:
 
     def parseJob(self, f):
         pass
-
