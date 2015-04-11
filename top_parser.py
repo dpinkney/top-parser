@@ -9,7 +9,7 @@ import logging
 import os
 import sys
 
-from top_entry import TopEntry, Job
+from top_entry import TopEntry
 
 __author__ = 'Dave Pinkney'
 
@@ -29,17 +29,17 @@ class TopParser(object):
         # Parse the file
         # Pass output sequence from top to TopParser
         with open(self.fileName, 'r') as f:
-            topEntry = TopEntry().parse(f)
-            self.entries.append(topEntry)
-            
+            while True:
+                firstLine = f.readline()
+                if not firstLine:
+                    break
+                topEntry = TopEntry().parse(firstLine, f)
+                self.entries.append(topEntry)
+
+                
         logger.info("Parsed {0} entries from {1}".format(len(self.entries), self.fileName))
-            
-    def parseEntry(self, f):
-        """
-        :type f - File of top output
-        :return: a TopEntry instance
-        """
-        read_data = f.read()
+
+
 
 def main(argv):
     examples = """
@@ -60,7 +60,7 @@ def main(argv):
         logLevel = logging.INFO
 
     logging.basicConfig(level=logLevel)
-        
+
     logger.debug("Got options: {0}".format(options))
 
     topParser = TopParser(options.fileName)
