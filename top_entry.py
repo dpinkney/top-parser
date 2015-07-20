@@ -19,8 +19,8 @@ class TopEntry(object):
 
     # Define Regular Expressions and Header Field Names
 
-    # Date / Timestamp header - Not part of standard top output
-    DATE = 'date'                                  # datetime.date
+    # Date / Timestamp header - Not part of standard top output. Will be manufactured if needed using uptime.
+    DATE = 'date'                                  # int:  the datetime.date ordinal value (days since 70)
     RE_DATE = re.compile('^(\d+)/(\d+)')
 
     # Uptime
@@ -101,11 +101,13 @@ class TopEntry(object):
         :type string: The first line of input read from f, it should be the top header
         :type f - File of top output, with one line consumed
         :throws: Exception if at EOF
+        : return: this instance
         """
         self.parseHeader(firstLine, f)
         self.eatBlankLine(f)
         self.parseBody(f)
         logger.debug("Parsed entry: {0}".format(self))
+        return self
 
     def parseHeader(self, firstLine, f):
         """
@@ -131,7 +133,7 @@ class TopEntry(object):
         :throws: Exception if at EOF
         """
 
-        if HAS_DATE_INFO == None or HAS_DATE_INFO:
+        if TopEntry.HAS_DATE_INFO == None or TopEntry.HAS_DATE_INFO:
             firstLine = self.parseDate(f, firstLine)
 
         self.parseUptime(firstLine)
@@ -150,11 +152,24 @@ class TopEntry(object):
         match = self.RE_DATE.match(line)
         if match:
             groups = match.groups()
-            HAS_DATE_INFO = True
-            self.header[self.DATE] = datetime.date(YEAR, int(groups[0]), int(groups[1]))
+            TopEntry.HAS_DATE_INFO = True
+            self.header[self.DATE] = datetime.date(TopEntry.YEAR, int(groups[0]), int(groups[1])).toordinal()
             line = self.readline(f)
+        else:
+            TopEntry.HAS_DATE_INFO = False
 
         return line
+
+    def getDateFromUptimeMinutes(self, uptimeMinutes):
+        """
+        For cases where we don't have a timestamp set, fake a date using the
+        uptime minutes, so we can always plot with a date and time.  Starting day 1 at 1/1/2000 so that 
+        plotting software won't break
+        : uptimeMinutes:  int - The uptime minutes
+        : return - int - the ordinal date to use
+        """
+        days = int(uptimeMinutes / (24 * 60))
+        return datetime.date(2000, 1, 1).toordinal() + days
 
     def parseUptime(self, line):
         """
@@ -180,6 +195,11 @@ class TopEntry(object):
         self.header[self.LOAD_1_MINUTE] = float(groups[5])
         self.header[self.LOAD_5_MINUTES] = float(groups[6])
         self.header[self.LOAD_15_MINUTES] = float(groups[7])
+
+        if not TopEntry.HAS_DATE_INFO:
+            # Set a fake date using uptime, 
+            self.header[self.DATE] = self.getDateFromUptimeMinutes(self.header[self.UPTIME_MINUTES])
+
 
     def parseUptimeMinutes(self, line):
         """

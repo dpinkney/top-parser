@@ -1,0 +1,212 @@
+top - 14:00:26 up 28 days,  7:34,  6 users,  load average: 0.04, 0.03, 0.05
+Tasks: 205 total,   1 running, 204 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.0 us,  0.2 sy,  0.0 ni, 98.6 id,  0.1 wa,  0.1 hi,  0.0 si,  0.0 st
+KiB Mem:  16355800 total, 15957492 used,   398308 free,   405336 buffers
+KiB Swap:  4095996 total,        0 used,  4095996 free, 12926928 cached
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1540 dpinkney  20   0 2017104 401988  71708 S   6.3  2.5 205:01.88 cinnamon
+ 2181 dpinkney  20   0  705172  40760  33532 S   6.3  0.2 438:12.67 synergy
+11580 dpinkney  20   0  123520   2816   2420 R   6.3  0.0   0:00.01 top
+    1 root      20   0   48404   5564   3752 S   0.0  0.0   0:05.35 systemd
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.34 kthreadd
+    3 root      20   0       0      0      0 S   0.0  0.0   0:13.79 ksoftirqd/0
+    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S   0.0  0.0   6:07.35 rcu_sched
+    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S   0.0  0.0   0:00.42 migration/0
+   10 root      rt   0       0      0      0 S   0.0  0.0   0:04.16 watchdog/0
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:04.22 watchdog/1
+   12 root      rt   0       0      0      0 S   0.0  0.0   0:00.29 migration/1
+   13 root      20   0       0      0      0 S   0.0  0.0   0:10.23 ksoftirqd/1
+   15 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:0H
+   16 root      rt   0       0      0      0 S   0.0  0.0   0:02.76 watchdog/2
+   17 root      rt   0       0      0      0 S   0.0  0.0   0:00.26 migration/2
+   18 root      20   0       0      0      0 S   0.0  0.0   0:10.44 ksoftirqd/2
+   20 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/2:0H
+   21 root      rt   0       0      0      0 S   0.0  0.0   0:02.60 watchdog/3
+   22 root      rt   0       0      0      0 S   0.0  0.0   0:00.34 migration/3
+   23 root      20   0       0      0      0 S   0.0  0.0   0:10.63 ksoftirqd/3
+   25 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/3:0H
+   26 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 khelper
+   27 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kdevtmpfs
+   28 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 netns
+   29 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 writeback
+   30 root      25   5       0      0      0 S   0.0  0.0   0:00.00 ksmd
+   31 root      39  19       0      0      0 S   0.0  0.0   0:00.00 khugepaged
+   32 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kintegrityd
+   33 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 bioset
+   34 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 crypto
+   35 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kblockd
+   36 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 ata_sff
+   37 root      20   0       0      0      0 S   0.0  0.0   0:00.00 khubd
+   38 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 md
+   65 root      20   0       0      0      0 S   0.0  0.0   0:00.29 kswapd0
+   66 root      20   0       0      0      0 S   0.0  0.0   0:04.11 fsnotify_mark
+   76 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kthrotld
+   77 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 acpi_thermal_pm
+   78 root      20   0       0      0      0 S   0.0  0.0   0:00.00 scsi_eh_0
+   79 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 scsi_tmf_0
+   80 root      20   0       0      0      0 S   0.0  0.0   0:00.00 scsi_eh_1
+   81 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 scsi_tmf_1
+   82 root      20   0       0      0      0 S   0.0  0.0   0:00.00 scsi_eh_2
+   83 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 scsi_tmf_2
+   84 root      20   0       0      0      0 S   0.0  0.0   0:00.00 scsi_eh_3
+   85 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 scsi_tmf_3
+   86 root      20   0       0      0      0 S   0.0  0.0   0:00.00 scsi_eh_4
+   87 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 scsi_tmf_4
+   88 root      20   0       0      0      0 S   0.0  0.0   0:00.00 scsi_eh_5
+   89 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 scsi_tmf_5
+   95 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kpsmoused
+   97 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 dm_bufio_cache
+   98 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 ipv6_addrconf
+   99 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 deferwq
+  129 root      20   0       0      0      0 S   0.0  0.0   0:00.26 kauditd
+  213 root      20   0       0      0      0 S   0.0  0.0   0:00.00 scsi_eh_6
+  214 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 scsi_tmf_6
+  218 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 ttm_swap
+  220 root       0 -20       0      0      0 S   0.0  0.0   0:01.07 kworker/0:1H
+  225 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/2:1H
+  237 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/3:1H
+  238 root      20   0       0      0      0 S   0.0  0.0   0:44.13 jbd2/sda2-8
+  239 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 ext4-rsv-conver
+  240 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:1H
+  315 root      20   0   83988  31156  30764 S   0.0  0.2   0:05.60 systemd-journal
+  325 root      20   0   43408   3992   2852 S   0.0  0.0   0:00.18 systemd-udevd
+  333 root      20   0  104464   2024   1780 S   0.0  0.0   0:00.00 lvmetad
+  353 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 rpciod
+  356 root     -51   0       0      0      0 S   0.0  0.0   0:00.00 irq/79-mei_me
+  371 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 edac-poller
+  511 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 hd-audio1
+  512 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 hd-audio0
+  530 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kvm-irqfd-clean
+  548 root      20   0       0      0      0 S   0.0  0.0   0:00.00 jbd2/sda1-8
+  549 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 ext4-rsv-conver
+  551 root      20   0       0      0      0 S   0.0  0.0   0:00.27 jbd2/sda6-8
+  552 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 ext4-rsv-conver
+  557 root      20   0       0      0      0 S   0.0  0.0   0:00.00 jbd2/sda3-8
+  558 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 ext4-rsv-conver
+  563 root      16  -4   51160   3104   2728 S   0.0  0.0   0:02.21 auditd
+  571 root      12  -8   80208   1540   1400 S   0.0  0.0   0:03.49 audispd
+  572 root      16  -4   26200   2160   1984 S   0.0  0.0   0:00.28 sedispatch
+  579 root      39  19   16768   2612   2372 S   0.0  0.0   0:00.69 alsactl
+  582 rtkit     21   1  164612   2432   2228 S   0.0  0.0   0:34.01 rtkit-daemon
+  583 root      20   0  369312   6480   5160 S   0.0  0.0   0:01.73 accounts-daemon
+  589 rpc       20   0   39912   2252   1820 S   0.0  0.0   0:03.15 rpcbind
+  590 root      20   0  130176   4244   3604 S   0.0  0.0   0:00.05 smartd
+  591 root      20   0   19240   2592   2336 S   0.0  0.0   4:19.85 irqbalance
+  592 root      20   0  443424  13304  11380 S   0.0  0.1   0:36.88 NetworkManager
+  593 root      20   0  212020   8472   6876 S   0.0  0.1   0:00.01 abrtd
+  594 root      20   0  209548   7708   6524 S   0.0  0.0   0:00.00 abrt-watch-log
+  606 root      20   0  798200  34056  33164 S   0.0  0.2   0:30.80 rsyslogd
+  609 chrony    20   0  100632   3216   2896 S   0.0  0.0   0:01.72 chronyd
+  612 avahi     20   0   28072   2724   2432 S   0.0  0.0   0:40.38 avahi-daemon
+  613 root      20   0  209548   7640   6460 S   0.0  0.0   0:00.33 abrt-watch-log
+  616 root      20   0  326540   7332   6368 S   0.0  0.0   0:00.00 ModemManager
+  622 root      20   0   34752   3096   2732 S   0.0  0.0   0:03.03 systemd-logind
+  623 dbus      20   0   27640   4036   2620 S   0.0  0.0   1:13.69 dbus-daemon
+  626 root      20   0    6476   1788   1680 S   0.0  0.0   0:00.00 mcelog
+  628 root      20   0   25932   2200   2008 S   0.0  0.0   0:00.01 atd
+  629 root      20   0  126308   2952   2336 S   0.0  0.0   0:09.74 crond
+  631 root      20   0  299080   5580   5000 S   0.0  0.0   0:00.01 gdm
+  633 avahi     20   0   27944    228      0 S   0.0  0.0   0:00.00 avahi-daemon
+  639 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 cfg80211
+  652 root      20   0  382740   6852   6000 S   0.0  0.0   0:00.04 gdm-simple-slav
+  670 root      20   0  661112  47464  16532 S   0.0  0.3   9:46.00 salt-minion
+  671 root      20   0  516416  25376  19996 S   0.0  0.2   0:00.25 libvirtd
+  679 rpcuser   20   0   44484   3076   2244 S   0.0  0.0   0:00.01 rpc.statd
+  683 root      20   0   82820   5920   5080 S   0.0  0.0   0:00.03 sshd
+  690 root      20   0   30092   3808   3488 S   0.0  0.0   0:00.00 bluetoothd
+  708 postgres  20   0  336672  18580  17896 S   0.0  0.1   0:26.31 postgres
+  709 root      20   0  285820 110548  18432 S   0.0  0.7 190:29.39 Xorg
+  710 postgres  20   0  192348   3052   2396 S   0.0  0.0   0:00.00 postgres
+  712 postgres  20   0  336672   3208   2524 S   0.0  0.0   0:00.73 postgres
+  713 postgres  20   0  336672   4520   3784 S   0.0  0.0   0:12.23 postgres
+  714 postgres  20   0  336672   3208   2524 S   0.0  0.0   0:10.66 postgres
+  715 postgres  20   0  337484   5888   4560 S   0.0  0.0   0:20.25 postgres
+  716 postgres  20   0  192480   3132   2396 S   0.0  0.0   0:44.31 postgres
+  809 root      20   0  102200  18472   5996 S   0.0  0.1   0:01.76 dhclient
+  818 gdm       20   0   44508   4192   3588 S   0.0  0.0   0:00.08 systemd
+  819 gdm       20   0   71376   1840      0 S   0.0  0.0   0:00.00 (sd-pam)
+  849 root      20   0  369040   9788   8436 S   0.0  0.1   0:29.80 upowerd
+  879 colord    20   0  394744   9012   7496 S   0.0  0.1   0:00.08 colord
+ 1117 root      20   0  369624   9796   6788 S   0.0  0.1   0:01.22 gdm-session-wor
+ 1121 dpinkney  20   0   44512   4128   3520 S   0.0  0.0   0:00.08 systemd
+ 1122 dpinkney  20   0   71892   1864      0 S   0.0  0.0   0:00.00 (sd-pam)
+ 1132 dpinkney  20   0  472040   7872   6744 S   0.0  0.0   0:00.49 gnome-keyring-d
+ 1216 dpinkney  20   0  538344  19228  15588 S   0.0  0.1   0:04.53 cinnamon-sessio
+ 1225 dpinkney  20   0   13928   1800   1656 S   0.0  0.0   0:00.00 dbus-launch
+ 1226 dpinkney  20   0   28180   3040   1500 S   0.0  0.0   7:15.84 dbus-daemon
+ 1287 dpinkney  20   0  395708   7404   6748 S   0.0  0.0   0:00.02 imsettings-daem
+ 1290 dpinkney  20   0  309440   6284   5688 S   0.0  0.0   0:00.19 gvfsd
+ 1295 dpinkney  20   0  357416   6204   5648 S   0.0  0.0   0:00.00 gvfsd-fuse
+ 1356 dpinkney  20   0   53164    580      0 S   0.0  0.0   0:06.47 ssh-agent
+ 1415 dpinkney  20   0  339972   5592   5200 S   0.0  0.0   0:00.00 at-spi-bus-laun
+ 1419 dpinkney  20   0   26560   2888   2512 S   0.0  0.0   0:00.64 dbus-daemon
+ 1422 dpinkney  20   0  129608   5148   4724 S   0.0  0.0   0:06.44 at-spi2-registr
+ 1437 dpinkney  20   0 1123048  32948  26532 S   0.0  0.2   2:50.59 cinnamon-settin
+ 1440 dpinkney   9 -11  569016  11204   8536 S   0.0  0.1   0:51.10 pulseaudio
+ 1469 dpinkney  20   0  400816   8288   7004 S   0.0  0.1   0:00.07 gvfs-udisks2-vo
+ 1471 root      20   0  362504   7108   5624 S   0.0  0.0   0:02.72 udisksd
+ 1480 dpinkney  20   0  310840   6164   5632 S   0.0  0.0   0:00.05 gvfs-mtp-volume
+ 1484 dpinkney  20   0  319924   6548   5968 S   0.0  0.0   0:00.04 gvfs-gphoto2-vo
+ 1488 dpinkney  20   0  304788   5808   5412 S   0.0  0.0   0:00.04 gvfs-goa-volume
+ 1491 dpinkney  20   0  637900  50240  16440 S   0.0  0.3   2:25.65 goa-daemon
+ 1497 dpinkney  20   0  315624  14580   9896 S   0.0  0.1   0:15.98 mission-control
+ 1500 dpinkney  20   0  428652   8164   7544 S   0.0  0.0   0:00.05 gvfs-afc-volume
+ 1522 dpinkney  20   0  308408  23760  15988 S   0.0  0.1   0:00.06 cinnamon-launch
+ 1542 root      20   0  193360   7976   6660 S   0.0  0.0   0:00.77 cupsd
+ 1546 dpinkney  39  19  684600  14952  12100 S   0.0  0.1   0:11.82 tracker-miner-f
+ 1548 dpinkney  20   0  865760  30384  25356 S   0.0  0.2   0:05.69 evolution-alarm
+ 1560 dpinkney  20   0  568680  17116   8340 S   0.0  0.1   0:01.96 tracker-store
+ 1604 dpinkney  20   0  739372  29700  22260 S   0.0  0.2   0:03.37 nm-applet
+ 1623 dpinkney  20   0  426080  21268  16848 S   0.0  0.1   0:01.26 abrt-applet
+ 1625 dpinkney  20   0  520376  10076   9188 S   0.0  0.1   0:00.52 csd-printer
+ 1633 dpinkney  20   0  180792   4760   4152 S   0.0  0.0   0:00.06 dconf-service
+ 1647 dpinkney  20   0  920252  33744  26780 S   0.0  0.2   0:19.52 nemo
+ 1649 dpinkney  20   0 1372024  26480  22236 S   0.0  0.2   0:00.25 evolution-sourc
+ 1671 dpinkney  20   0  355504  17304  14252 S   0.0  0.1   0:01.86 polkit-gnome-au
+ 1741 dpinkney  20   0 1150844  59644  22272 S   0.0  0.4   0:13.81 evolution-calen
+ 1744 dpinkney  20   0  465636   6960   6360 S   0.0  0.0   0:00.03 gvfsd-trash
+ 1759 dpinkney  20   0  236852   7720   5660 S   0.0  0.0   0:00.91 gvfsd-metadata
+ 1930 dpinkney  20   0  685636  27884  21180 S   0.0  0.2   1:24.64 gnome-terminal-
+ 1935 dpinkney  20   0    8440   1616   1496 S   0.0  0.0   0:00.00 gnome-pty-helpe
+ 1936 dpinkney  20   0  121892   9948   3100 S   0.0  0.1   0:00.03 bash
+ 1980 dpinkney  20   0  666272 170372  18768 S   0.0  1.0  47:27.11 cinnamon-screen
+ 1986 dpinkney  20   0  370124  21012  12088 S   0.0  0.1  11:05.95 applet.py
+ 1999 dpinkney  20   0  125956   2856   2612 S   0.0  0.0   0:02.60 screen
+ 2000 dpinkney  20   0  130568   7176   2264 S   0.0  0.0   0:00.47 screen
+ 2001 dpinkney  20   0  121920   9920   3040 S   0.0  0.1   0:00.50 bash
+ 2046 dpinkney  20   0  121920   9916   3040 S   0.0  0.1   0:00.15 bash
+ 2184 dpinkney  20   0  149724   4864   4448 S   0.0  0.0   0:05.37 gconfd-2
+ 2196 dpinkney  20   0  246292  44772   7864 S   0.0  0.3  72:48.86 synergys
+ 2203 dpinkney  20   0  483052   7284   6664 S   0.0  0.0   0:12.12 deja-dup-monito
+ 2217 hcp       20   0   44512   4248   3636 S   0.0  0.0   0:00.08 systemd
+ 2218 hcp       20   0   71892   1888      0 S   0.0  0.0   0:00.00 (sd-pam)
+ 3052 root      20   0   44512   4156   3540 S   0.0  0.0   0:00.09 systemd
+ 3053 root      20   0   71892   1888      0 S   0.0  0.0   0:00.00 (sd-pam)
+ 6464 root      20   0       0      0      0 S   0.0  0.0   0:01.93 kworker/0:2
+ 8371 root      20   0       0      0      0 S   0.0  0.0   0:00.09 kworker/2:0
+ 8750 root      20   0       0      0      0 S   0.0  0.0   0:00.14 kworker/u64:2
+ 8755 root      20   0  135528   7276   6100 S   0.0  0.0   0:00.02 sshd
+ 8757 dpinkney  20   0  135528   5412   4208 S   0.0  0.0   0:00.09 sshd
+ 8764 dpinkney  20   0  123024  11272   3288 S   0.0  0.1   0:00.26 bash
+ 9062 root      20   0       0      0      0 S   0.0  0.0   0:00.05 kworker/1:2
+ 9816 root      20   0       0      0      0 S   0.0  0.0   0:00.13 kworker/3:0
+10247 root      20   0       0      0      0 S   0.0  0.0   0:00.03 kworker/2:1
+10270 root      20   0       0      0      0 S   0.0  0.0   0:00.35 kworker/3:1
+10849 root      20   0       0      0      0 S   0.0  0.0   0:00.04 kworker/1:1
+11281 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kworker/0:1
+11485 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kworker/2:2
+11579 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0
+16072 unbound   20   0   44512   4280   3668 S   0.0  0.0   0:00.07 systemd
+16074 unbound   20   0   71892   1904      0 S   0.0  0.0   0:00.00 (sd-pam)
+16730 polkitd   20   0  543484  52844   8676 S   0.0  0.3   3:09.04 polkitd
+17693 dpinkney  20   0  765592  87996  34764 S   0.0  0.5  61:03.38 pidgin
+19434 dpinkney  20   0 6397864 146188  34556 S   0.0  0.9  12:11.69 java
+24167 dpinkney  20   0 1819760 606548  99508 S   0.0  3.7 235:42.32 firefox
+24559 dpinkney  20   0  121916   9912   3040 S   0.0  0.1   0:00.23 bash
+24605 dpinkney  20   0  648452  52848  30460 S   0.0  0.3   4:31.40 emacs
+28357 dpinkney  20   0 2157172  77728  43976 S   0.0  0.5   4:24.24 rhythmbox
+28392 dpinkney  20   0  512060   9700   8728 S   0.0  0.1   0:00.04 gvfsd-http
+31507 root      20   0       0      0      0 S   0.0  0.0   0:00.80 kworker/u64:0
