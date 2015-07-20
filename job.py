@@ -20,18 +20,18 @@ class Job(object):
     JOB_TIME = 'cpuTotalTime'        # string
     JOB_COMMAND = 'command'          # string
 
-    RE_JOB = re.compile("""^\s*(\d+)                # PID
-                            \s+(\w+)                # user
-                            \s+([-\w]+)             # priority
-                            \s+([-\d]+)             # nice
-                            \s+(\d+|\d+\.\d+\w?)    # memVirtual
-                            \s+(\d+|\d+\.\d+\w?)    # memResident
-                            \s+(\d+|\d+\.\d+\w?)    # memShared
-                            \s+(\w+)                # status
-                            \s+([\d.]+)             # cpuPercent
-                            \s+([\d.]+)             # memPercent
-                            \s+(\d+:\d+[.\d]*)      # cpuTotalTime
-                            \s+(.+)                 # command
+    RE_JOB = re.compile("""^\s*(\d+)                 # PID
+                            \s+(\w+)                 # user
+                            \s+([-\w]+)              # priority
+                            \s+([-\d]+)              # nice
+                            \s+(\d+|\d+[.\d]+\w?)    # memVirtual
+                            \s+(\d+|\d+[.\d]+\w?)    # memResident
+                            \s+(\d+|\d+[.\d]+\w?)    # memShared
+                            \s+(\w+)                 # status
+                            \s+([\d.]+)              # cpuPercent
+                            \s+([\d.]+)              # memPercent
+                            \s+(\d+:\d+[.\d]*)       # cpuTotalTime
+                            \s+(.+)                  # command
                             $""", re.VERBOSE)
 
     RE_JOB_RES = re.compile('^(\d+)$')

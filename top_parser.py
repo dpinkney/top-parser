@@ -44,8 +44,15 @@ class TopParser(object):
 def main(argv):
     examples = """
     Examples:
-    # Here's an example of something.
-        %prog -f outputFile
+    # Parse top data from the specified output file, generated via "top -b":
+        %prog topOutput.log
+
+    # Parse top data from an output file containing timestamps, generated with a script run via cron such as:
+    #
+    #  date "+%m/%d %H:%M:%S" >> topWithDate.log
+    #  top -b -n1 -H >> topWithDate.log
+        %prog topWithDate.log
+
     """
     parser = argparse.ArgumentParser(description="""This tool is used to parse output from the top command""",
                                      epilog=examples, formatter_class=argparse.RawDescriptionHelpFormatter)

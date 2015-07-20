@@ -1,3 +1,4 @@
+import datetime
 import logging
 import re
 
@@ -12,8 +13,16 @@ class TopEntry(object):
     This class represents the output from one iteration of top.
     It will read top output from a file and initialize itself from it.
     """
+    YEAR = datetime.date.today().year
+
+    HAS_DATE_INFO = None                          # tracks whether the top input has a date header
 
     # Define Regular Expressions and Header Field Names
+
+    # Date / Timestamp header - Not part of standard top output
+    DATE = 'date'                                  # datetime.date
+    RE_DATE = re.compile('^(\d+)/(\d+)')
+
     # Uptime
     TIME_OF_DAY = 'timeOfDay'                      # string
     UPTIME_MINUTES = 'uptimeMinutes'               # int
@@ -22,8 +31,21 @@ class TopEntry(object):
     LOAD_5_MINUTES = '5 minute load'               # float
     LOAD_15_MINUTES = '15 minute load'             # float
     # Uptime has variable time unit output, might be days, minutes, or just hours:min
-    RE_UPTIME = re.compile('^top - ([\d:]+) up\s+(\d+ days?, \d+:\d+|\d+ mins?|\d+:\d+),\s+(\d+) users?,\s+load average: ([\d.]+), ([\d.]+), ([\d.]+)')
+
+    RE_UPTIME = re.compile("""^top\s+-
+                              \s+(\d+):(\d+):(\d+)                                 # time of day
+                              \s+up
+                              \s+(\d+\s+days?,\s+\d+:\d+                           # uptime
+                                  |\d+\s+days?,\s+\d+\s+mins?                      # uptime
+                                  |\d+\s+mins?                                     # uptime
+                                  |\d+:\d+),                                       # uptime
+                              \s+(\d+)\s+users?,                                   # num users
+                              \s+load\s+average:
+                              \s+([\d.]+),\s+([\d.]+),\s+([\d.]+)                  # load
+                              """, re.VERBOSE)
+
     RE_UPTIME_DAYS = re.compile('(\d+)\s+days?,\s+(\d+):(\d+)')
+    RE_UPTIME_DAYS_MIN = re.compile('(\d+)\s+days?,\s+(\d+)\s+mins?')
     RE_UPTIME_HOUR = re.compile('(\d+):(\d+)')
     RE_UPTIME_MIN = re.compile('(\d+)\s+mins?')
 
@@ -96,15 +118,43 @@ class TopEntry(object):
         KiB Mem:  16355800 total, 15649032 used,   706768 free,   294280 buffers
         KiB Swap:  4095996 total,    96600 used,  3999396 free, 10201704 cached
 
+        or:
+
+        05/27 05:58:39
+        top - 05:58:39 up 27 days, 16:32, 17 users,  load average: 0.01, 0.04, 0.05
+        Tasks: 285 total,   1 running, 284 sleeping,   0 stopped,   0 zombie
+        %Cpu(s):  2.4 us,  0.5 sy,  0.0 ni, 96.8 id,  0.1 wa,  0.1 hi,  0.0 si,  0.0 st
+        KiB Mem:  16355800 total, 15649032 used,   706768 free,   294280 buffers
+        KiB Swap:  4095996 total,    96600 used,  3999396 free, 10201704 cached
+
         :return: a TopEntry instance
         :throws: Exception if at EOF
         """
+
+        if HAS_DATE_INFO == None or HAS_DATE_INFO:
+            firstLine = self.parseDate(f, firstLine)
 
         self.parseUptime(firstLine)
         self.parseTasks(self.readline(f))
         self.parseCpu(self.readline(f))
         self.parseMem(self.readline(f))
         self.parseSwap(self.readline(f))
+
+
+    def parseDate(self, f, line):
+        """
+        Try to parse the DATE from line.  If we find the DATE, store it in this object,
+        set HAS_DATE_INFO, and return the next line of input from f
+        :return: The next line of text, or line if it did not match DATE
+        """
+        match = self.RE_DATE.match(line)
+        if match:
+            groups = match.groups()
+            HAS_DATE_INFO = True
+            self.header[self.DATE] = datetime.date(YEAR, int(groups[0]), int(groups[1]))
+            line = self.readline(f)
+
+        return line
 
     def parseUptime(self, line):
         """
@@ -119,12 +169,17 @@ class TopEntry(object):
         groups = match.groups()
         logger.debug("Got groups: {0}".format(groups))
 
-        self.header[self.TIME_OF_DAY] = groups[0]
-        self.header[self.UPTIME_MINUTES] = self.parseUptimeMinutes(groups[1])
-        self.header[self.NUM_USERS] = int(groups[2])
-        self.header[self.LOAD_1_MINUTE] = float(groups[3])
-        self.header[self.LOAD_5_MINUTES] = float(groups[4])
-        self.header[self.LOAD_15_MINUTES] = float(groups[5])
+        # Can't recall why I broke this out into components - to plot time as #seconds?
+        hours = groups[0]
+        minutes = groups[1]
+        seconds = groups[2]
+        self.header[self.TIME_OF_DAY] = "{0}:{1}:{2}".format(hours, minutes, seconds)
+
+        self.header[self.UPTIME_MINUTES] = self.parseUptimeMinutes(groups[3])
+        self.header[self.NUM_USERS] = int(groups[4])
+        self.header[self.LOAD_1_MINUTE] = float(groups[5])
+        self.header[self.LOAD_5_MINUTES] = float(groups[6])
+        self.header[self.LOAD_15_MINUTES] = float(groups[7])
 
     def parseUptimeMinutes(self, line):
         """
@@ -140,20 +195,31 @@ class TopEntry(object):
             groups = match.groups()
             logger.debug("Parsed groups: {0}".format(groups))
             minutes = int(groups[0]) * 24 * 60 + int(groups[1]) * 60 + int(groups[2])
-        else:
-            match = self.RE_UPTIME_HOUR.match(line)
-            if match:
-                groups = match.groups()
-                logger.debug("Parsed groups: {0}".format(groups))
-                minutes = int(groups[0]) * 60 + int(groups[1])
-            else:
-                match = self.RE_UPTIME_MIN.match(line)
-                groups = match.groups()
-                logger.debug("Parsed groups: {0}".format(groups))
-                minutes = int(groups[0])
+            return minutes
 
-        logger.debug("Parsed minutes of {0} from {1}".format(minutes, line))
-        return minutes
+        match = self.RE_UPTIME_DAYS_MIN.match(line)
+        if match:
+            groups = match.groups()
+            logger.debug("Parsed groups: {0}".format(groups))
+            minutes = int(groups[0]) * 24 * 60 + int(groups[1])
+            return minutes
+
+        match = self.RE_UPTIME_HOUR.match(line)
+        if match:
+            groups = match.groups()
+            logger.debug("Parsed groups: {0}".format(groups))
+            minutes = int(groups[0]) * 60 + int(groups[1])
+            return minutes
+
+        match = self.RE_UPTIME_MIN.match(line)
+        if match:
+            groups = match.groups()
+            logger.debug("Parsed groups: {0}".format(groups))
+            minutes = int(groups[0])
+            return minutes
+
+
+        raise Exception("Could not parse uptime: {0}".format(line))
 
     def parseTasks(self, line):
         """
