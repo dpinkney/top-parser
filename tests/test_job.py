@@ -41,6 +41,9 @@ class JobTestCase(unittest.TestCase):
         line = '32469 dpinkney  20   0 3920412 1.234m  72804 S   6.2 15.4   2709:11 firefox'
         self.checkParse(line, '32469', 'dpinkney', '20', 0, 3920412, (1.234 * 1024), 72804, 'S', 6.2, 15.4, '2709:11', 'firefox')
 
+        line = ' 5199 postgres  10 -10  436m   9m 7904 S  0.0  0.1   0:00.05 postmaster   '
+        self.checkParse(line, '5199', 'postgres', '10', -10, (436 * 1024), (9 * 1024), 7904, 'S', 0.0, 0.1, '0:00.05', 'postmaster')
+
     def checkParse(self, line, pid, user, priority, nice, virtual, resident, shared, status,
                    cpu, mem, cpuTime, command):
         job = Job()

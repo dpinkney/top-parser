@@ -15,8 +15,6 @@ class TopEntry(object):
     """
     YEAR = datetime.date.today().year
 
-    HAS_DATE_INFO = None                          # tracks whether the top input has a date header
-
     # Define Regular Expressions and Header Field Names
 
     # Date / Timestamp header - Not part of standard top output. Will be manufactured if needed using uptime.
@@ -66,30 +64,33 @@ class TopEntry(object):
     CPU_HI = 'cpuHardwareInt'                      # float
     CPU_SI = 'cpuSoftwareInt'                      # float
     CPU_ST = 'cpuStolen'                           # float
-    RE_CPU = re.compile('^%Cpu\(s\):\s+([\d.]+) us,\s+([\d.]+) sy,\s+([\d.]+) ni,\s+([\d.]+) id,\s+([\d.]+) wa,\s+([\d.]+) hi,\s+([\d.]+) si,\s+([\d.]+) st')
+    RE_CPU = re.compile('^%?Cpu\(s\):\s+([\d.]+)[% ]us,\s+([\d.]+)[% ]sy,\s+([\d.]+)[% ]ni,\s+([\d.]+)[% ]id,\s+([\d.]+)[% ]wa,\s+([\d.]+)[% ]hi,\s+([\d.]+)[% ]si,\s+([\d.]+)[% ]st')
 
     # Memory
     MEM_TOTAL = 'memTotal'
     MEM_USED = 'memUsed'
     MEM_FREE = 'memFree'
     MEM_BUFFERS = 'memBuffers'
-    RE_MEM = re.compile('^KiB Mem:\s+(\d+) total,\s+(\d+) used,\s+(\d+) free,\s+(\d+) buffers?')
+    RE_MEM = re.compile('^(?:KiB )?Mem:\s+(\d+)k? total,\s+(\d+)k? used,\s+(\d+)k? free,\s+(\d+)k? buffers?')
 
     # Swap
     SWAP_TOTAL = 'swapTotal'
     SWAP_USED = 'swapUsed'
     SWAP_FREE = 'swapFree'
     SWAP_CACHED = 'swapCached'
-    RE_SWAP = re.compile('^KiB Swap:\s+(\d+) total,\s+(\d+) used,\s+(\d+) free,\s+(\d+) cached')
+    RE_SWAP = re.compile('^(?:KiB )?Swap:\s+(\d+)k? total,\s+(\d+)k? used,\s+(\d+)k? free,\s+(\d+)k? cached')
 
     # Jobs
     RE_JOB_HEADER = re.compile('^\s+PID\s+USER\s+PR\s+NI\s+VIRT\s+RES\s+SHR\s+S\s+%CPU\s+%MEM\s+TIME\+\s+COMMAND')
 
-    def __init__(self):
+    def __init__(self, hasDate=None):
         """
+        : hasDate - boolean - True if we should parse a date before parsing the topEntry, false if we shouldn't, 
+                              None if not known.
         """
         self.header = {}
         self.jobs = {}
+        self.hasDate = hasDate
 
     def __str__(self):
         """Convert to string, for str()."""
@@ -133,7 +134,7 @@ class TopEntry(object):
         :throws: Exception if at EOF
         """
 
-        if TopEntry.HAS_DATE_INFO == None or TopEntry.HAS_DATE_INFO:
+        if self.hasDate == None or self.hasDate:
             firstLine = self.parseDate(f, firstLine)
 
         self.parseUptime(firstLine)
@@ -152,11 +153,11 @@ class TopEntry(object):
         match = self.RE_DATE.match(line)
         if match:
             groups = match.groups()
-            TopEntry.HAS_DATE_INFO = True
+            self.hasDate = True
             self.header[self.DATE] = datetime.date(TopEntry.YEAR, int(groups[0]), int(groups[1])).toordinal()
             line = self.readline(f)
         else:
-            TopEntry.HAS_DATE_INFO = False
+            self.hasDate = False
 
         return line
 
@@ -196,7 +197,7 @@ class TopEntry(object):
         self.header[self.LOAD_5_MINUTES] = float(groups[6])
         self.header[self.LOAD_15_MINUTES] = float(groups[7])
 
-        if not TopEntry.HAS_DATE_INFO:
+        if not self.hasDate:
             # Set a fake date using uptime, 
             self.header[self.DATE] = self.getDateFromUptimeMinutes(self.header[self.UPTIME_MINUTES])
 
@@ -283,6 +284,8 @@ class TopEntry(object):
         """
         Parse the mem information from line and store it in this object's state
         KiB Mem:  16355800 total, 15649032 used,   706768 free,   294280 buffers
+          or
+        Mem:   8170096k total,  7148836k used,  1021260k free,   337592k buffers
         """
         logger.debug("Parsing Mem from {0}".format(line))
 
@@ -298,6 +301,8 @@ class TopEntry(object):
         """
         Parse the swap information from line and store it in this object's state
         KiB Swap:  4095996 total,    96600 used,  3999396 free, 10201704 cached
+          or
+        Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached'
         """
         logger.debug("Parsing Swap from {0}".format(line))
 

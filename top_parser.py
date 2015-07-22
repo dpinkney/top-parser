@@ -26,6 +26,9 @@ class TopParser(object):
     def parse(self):
         logger.debug("Parsing file {0}".format(self.fileName))
 
+
+        hasDate = None
+
         # Parse the file
         # Pass output sequence from top to TopParser
         with open(self.fileName, 'r') as f:
@@ -33,8 +36,14 @@ class TopParser(object):
                 firstLine = f.readline()
                 if not firstLine:
                     break
-                topEntry = TopEntry().parse(firstLine, f)
+                firstLine = firstLine.strip()
+                if not firstLine:
+                    # Skip blank lines between entries (if any)
+                    continue
+                logger.debug('read line: "{0}"'.format(firstLine))
+                topEntry = TopEntry(hasDate).parse(firstLine, f)
                 self.entries.append(topEntry)
+                hasDate = topEntry.hasDate
 
                 
         logger.info("Parsed {0} entries from {1}".format(len(self.entries), self.fileName))

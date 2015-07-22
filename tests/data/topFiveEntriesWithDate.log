@@ -1,0 +1,1260 @@
+05/26 18:05:02
+top - 18:05:02 up 444 days,  2:10,  0 users,  load average: 0.81, 0.95, 1.02
+Tasks: 272 total,   1 running, 270 sleeping,   0 stopped,   1 zombie
+Cpu(s):  2.1%us,  1.0%sy,  0.0%ni, 85.4%id, 11.5%wa,  0.0%hi,  0.1%si,  0.0%st
+Mem:   8170096k total,  7148836k used,  1021260k free,   337592k buffers
+Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 4408 ris       20   0 5289m 790m 3844 S  2.0  9.9  72552:27 java               
+ 4717 storman   20   0 1582m 637m 1188 S  2.0  8.0  13193:21 storman            
+15275 postgres  10 -10  443m 125m 120m S  2.0  1.6   0:11.99 postmaster         
+25054 root      20   0 15264 1304  860 R  2.0  0.0   0:00.01 top                
+    1 root      20   0 21472 1100  748 S  0.0  0.0   0:02.33 init               
+    2 root      20   0     0    0    0 S  0.0  0.0   0:06.92 kthreadd           
+    3 root      20   0     0    0    0 S  0.0  0.0   7:17.66 ksoftirqd/0        
+    6 root      RT   0     0    0    0 S  0.0  0.0 632045:52 migration/0        
+    7 root      RT   0     0    0    0 S  0.0  0.0 159090:35 migration/1        
+    9 root      20   0     0    0    0 S  0.0  0.0   7:07.78 ksoftirqd/1        
+   10 root      20   0     0    0    0 S  0.0  0.0  24:23.17 kworker/0:1        
+   11 root      RT   0     0    0    0 S  0.0  0.0 637280:21 migration/2        
+   13 root      20   0     0    0    0 S  0.0  0.0   6:51.67 ksoftirqd/2        
+   14 root      RT   0     0    0    0 S  0.0  0.0 626770:01 migration/3        
+   16 root      20   0     0    0    0 S  0.0  0.0   6:39.64 ksoftirqd/3        
+   17 root      RT   0     0    0    0 S  0.0  0.0 613283:55 migration/4        
+   19 root      20   0     0    0    0 S  0.0  0.0   6:34.83 ksoftirqd/4        
+   20 root      RT   0     0    0    0 S  0.0  0.0 571913:25 migration/5        
+   22 root      20   0     0    0    0 S  0.0  0.0   6:51.67 ksoftirqd/5        
+   23 root      RT   0     0    0    0 S  0.0  0.0 635019:35 migration/6        
+   25 root      20   0     0    0    0 S  0.0  0.0   6:06.46 ksoftirqd/6        
+   26 root      RT   0     0    0    0 S  0.0  0.0 633803:10 migration/7        
+   28 root      20   0     0    0    0 S  0.0  0.0   6:10.58 ksoftirqd/7        
+   29 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 cpuset             
+   30 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 khelper            
+   31 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 netns              
+  193 root      20   0     0    0    0 S  0.0  0.0   0:59.08 sync_supers        
+  195 root      20   0     0    0    0 S  0.0  0.0   0:02.41 bdi-default        
+  196 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kintegrityd        
+  198 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kblockd            
+  309 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ata_sff            
+  319 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khubd              
+  334 root      20   0     0    0    0 S  0.0  0.0  28:18.91 kworker/5:1        
+  508 root      20   0     0    0    0 S  0.0  0.0 697:10.51 kswapd0            
+  578 root      20   0     0    0    0 S  0.0  0.0   0:34.73 fsnotify_mark      
+  603 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 crypto             
+  742 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kpsmoused          
+  744 root      20   0     0    0    0 S  0.0  0.0  28:34.94 kworker/5:2        
+  752 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpathd            
+  753 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpath_handlerd    
+  865 root      20   0     0    0    0 S  0.0  0.0   0:00.01 scsi_eh_0          
+  866 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_1          
+  867 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_0      
+  868 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_2          
+  869 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_2          
+  940 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_1      
+  941 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_3          
+  942 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_3          
+ 1074 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1078 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1082 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1087 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1093 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1149 root      20   0     0    0    0 S  0.0  0.0   2:47.29 jbd2/dm-5-8        
+ 1150 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ext4-dio-unwrit    
+ 1184 root      16  -4 12916  896  476 S  0.0  0.0   6:10.15 udevd              
+ 1474 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kauditd            
+ 1478 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kvm-irqfd-clean    
+ 1500 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1598 root      20   0     0    0    0 S  0.0  0.0   0:00.06 kjournald          
+ 1599 root      20   0     0    0    0 S  0.0  0.0  11:16.32 kjournald          
+ 2205 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond0              
+ 2207 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond1              
+ 2385 postgres  10 -10  443m 105m 100m S  0.0  1.3   0:23.51 postmaster         
+ 2563 postgres  10 -10  442m  39m  35m S  0.0  0.5   0:01.19 postmaster         
+ 2568 postgres  10 -10  436m  27m  24m S  0.0  0.3   0:00.21 postmaster         
+ 2610 root      20   0     0    0    0 S  0.0  0.0   3:30.81 flush-254:5        
+ 2611 root      20   0     0    0    0 S  0.0  0.0   6:46.06 flush-254:7        
+ 2682 postgres  10 -10  443m 125m 120m S  0.0  1.6   0:12.37 postmaster         
+ 2683 postgres  10 -10  442m  61m  56m S  0.0  0.8   0:00.91 postmaster         
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.14 ntpd               
+ 2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
+ 2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.54 irqbalance         
+ 3033 root      20   0     0    0    0 S  0.0  0.0   0:06.54 flush-254:10       
+ 3069 postgres  10 -10  441m  15m  11m S  0.0  0.2   0:00.13 postmaster         
+ 3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
+ 3140 root      20   0     0    0    0 S  0.0  0.0   2:33.99 kworker/3:0        
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
+ 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.08 slabd              
+ 3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
+ 3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
+ 3234 root      20   0  6336  604  504 S  0.0  0.0   0:00.00 acpid              
+ 3251 root      39  19     0    0    0 S  0.0  0.0  18685:06 kipmi0             
+ 3263 postgres  10 -10  442m  18m  14m S  0.0  0.2   0:00.21 postmaster         
+ 3283 postgres  10 -10  435m 9836 7640 S  0.0  0.1   0:00.06 postmaster         
+ 3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
+ 3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
+ 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.08 volman             
+ 3506 postgres  10 -10  435m 9576 7380 S  0.0  0.1   0:00.05 postmaster         
+ 3570 postgres  10 -10  435m 9160 6968 S  0.0  0.1   0:00.04 postmaster         
+ 3818 root      20   0     0    0    0 S  0.0  0.0 278:37.76 kjournald          
+ 3946 root      20   0     0    0    0 S  0.0  0.0 209:51.08 kjournald          
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.41 postmaster         
+ 3973 postgres  10 -10  435m 258m 255m S  0.0  3.2 248:47.80 postmaster         
+ 3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  46:59.99 postmaster         
+ 3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:16.34 postmaster         
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
+ 4156 root      20   0  159m  728  500 S  0.0  0.0  12:02.17 squire             
+ 4157 root      20   0  159m  728  500 S  0.0  0.0  12:05.08 squire             
+ 4176 postgres  10 -10  443m  75m  69m S  0.0  0.9   0:02.85 postmaster         
+ 4226 postgres  10 -10  442m  57m  53m S  0.0  0.7   0:00.64 postmaster         
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
+ 4232 root      20   0  311m 1044  768 S  0.0  0.0  11:34.27 timelord           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4274 named     20   0  660m  29m  464 S  0.0  0.4   0:52.62 named              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
+ 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.75 sysmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
+ 4467 postgres  10 -10  443m  58m  53m S  0.0  0.7   0:00.74 postmaster         
+ 4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
+ 4511 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd              
+ 4513 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4              
+ 4514 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4_callbacks    
+ 4515 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4516 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4517 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4518 root      20   0     0    0    0 S  0.0  0.0   0:00.08 nfsd               
+ 4519 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4520 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4521 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4522 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4524 root      20   0 28160 1740  880 S  0.0  0.0   5:46.04 rpc.mountd         
+ 4526 rpcuser   20   0 23412 1140  728 S  0.0  0.0   0:00.05 rpc.statd          
+ 4537 root      20   0 14184 1800  988 S  0.0  0.0  30:48.46 keep_inodes        
+ 4548 root      20   0 10780 1212  892 S  0.0  0.0  20:30.96 watch              
+ 4549 root      20   0 13532 1000  780 S  0.0  0.0   0:00.00 monitor_shell      
+ 4551 root      20   0 15196 1252  868 S  0.0  0.0   1884:52 top                
+ 4554 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
+ 4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
+ 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
+ 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:17.71 java               
+ 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
+ 5197 postgres  10 -10  442m  18m  14m S  0.0  0.2   0:00.22 postmaster         
+ 5198 postgres  10 -10  436m  10m 8224 S  0.0  0.1   0:00.05 postmaster         
+ 5199 postgres  10 -10  436m   9m 7904 S  0.0  0.1   0:00.05 postmaster         
+ 5300 postgres  10 -10  443m 109m 104m S  0.0  1.4   0:38.01 postmaster         
+ 5313 postgres  10 -10  440m  12m 9.8m S  0.0  0.2   0:00.06 postmaster         
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
+ 5450 storman   20   0 1646m 749m 1176 S  0.0  9.4  14151:26 storman            
+ 5519 postgres  10 -10  442m  68m  64m S  0.0  0.9   0:01.25 postmaster         
+ 6174 postgres  10 -10  442m 112m 107m S  0.0  1.4   0:00.40 postmaster         
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6961 root      20   0  315m 1144  752 S  0.0  0.0   8:19.93 risfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
+ 7024 root      20   0  315m  812  404 S  0.0  0.0   8:19.96 risfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
+ 7117 root      20   0  315m  784  420 S  0.0  0.0   8:24.30 risfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
+ 7181 root      20   0  315m  936  508 S  0.0  0.0   8:28.13 risfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 7225 root      20   0  116m 2316 1268 S  0.0  0.0   0:43.82 smbd               
+ 7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7448 root      20   0  246m 5340 1452 S  0.0  0.1 320:00.94 snmpd              
+ 7577 postgres  10 -10  443m 119m 113m S  0.0  1.5   0:01.55 postmaster         
+ 7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.77 irqbalance         
+ 7671 postgres  10 -10  440m  13m  11m S  0.0  0.2   0:00.07 postmaster         
+ 7907 postgres  10 -10  442m  69m  65m S  0.0  0.9   0:10.58 postmaster         
+ 8533 postgres  10 -10  443m 110m 105m S  0.0  1.4   0:02.06 postmaster         
+ 8534 postgres  10 -10  441m  44m  41m S  0.0  0.6   0:00.27 postmaster         
+ 8590 postgres  10 -10  442m  58m  54m S  0.0  0.7   0:00.74 postmaster         
+ 8856 postgres  10 -10  436m  23m  21m S  0.0  0.3   0:00.13 postmaster         
+ 8857 postgres  10 -10  436m  20m  18m S  0.0  0.3   0:00.05 postmaster         
+ 9258 root      20   0     0    0    0 S  0.0  0.0   0:07.56 kworker/7:1        
+10421 root      20   0     0    0    0 S  0.0  0.0   0:42.48 kworker/6:2        
+10508 postgres  10 -10  443m  80m  75m S  0.0  1.0   0:00.27 postmaster         
+10528 postgres  10 -10  433m  18m  16m S  0.0  0.2   0:00.03 postmaster         
+10566 postgres  10 -10  443m 144m 139m S  0.0  1.8   0:21.57 postmaster         
+10567 postgres  10 -10  442m 100m  96m S  0.0  1.3   0:01.01 postmaster         
+10571 postgres  10 -10  440m  17m  14m S  0.0  0.2   0:00.11 postmaster         
+10603 postgres  10 -10  436m  76m  73m S  0.0  1.0   0:00.29 postmaster         
+10906 postgres  10 -10  442m  42m  39m S  0.0  0.5   0:00.12 postmaster         
+10907 postgres  10 -10  436m  10m 8204 S  0.0  0.1   0:00.04 postmaster         
+11332 postgres  10 -10  442m  57m  54m S  0.0  0.7   0:00.63 postmaster         
+11984 root      20   0     0    0    0 S  0.0  0.0   0:00.02 kworker/u:1        
+12356 postgres  10 -10  442m  18m  15m S  0.0  0.2   0:00.19 postmaster         
+12602 postgres  10 -10  442m  27m  24m S  0.0  0.4   0:00.45 postmaster         
+12603 postgres  10 -10  442m  19m  15m S  0.0  0.2   0:00.29 postmaster         
+12604 postgres  10 -10  440m  18m  15m S  0.0  0.2   0:00.39 postmaster         
+13086 postgres  10 -10  440m  40m  37m S  0.0  0.5   0:00.11 postmaster         
+14904 root      20   0     0    0    0 S  0.0  0.0   1:51.63 kworker/7:2        
+14957 postgres  10 -10  436m  10m 8872 S  0.0  0.1   0:00.10 postmaster         
+14958 postgres  10 -10  436m  10m 8460 S  0.0  0.1   0:00.05 postmaster         
+14959 postgres  10 -10  435m 9336 7144 S  0.0  0.1   0:00.02 postmaster         
+14960 postgres  10 -10  435m 9428 7236 S  0.0  0.1   0:00.02 postmaster         
+14961 postgres  10 -10  435m 9076 6940 S  0.0  0.1   0:00.02 postmaster         
+14962 postgres  10 -10  435m 9068 6880 S  0.0  0.1   0:00.02 postmaster         
+14963 postgres  10 -10  435m 9060 6876 S  0.0  0.1   0:00.02 postmaster         
+14964 postgres  10 -10  435m 8824 6696 S  0.0  0.1   0:00.01 postmaster         
+14965 postgres  10 -10  442m  17m  14m S  0.0  0.2   0:00.22 postmaster         
+14966 postgres  10 -10  436m 9604 7404 S  0.0  0.1   0:00.01 postmaster         
+14967 postgres  10 -10  435m 9092 6956 S  0.0  0.1   0:00.02 postmaster         
+14968 postgres  10 -10  435m 9088 6952 S  0.0  0.1   0:00.01 postmaster         
+14969 postgres  10 -10  435m 9040 6904 S  0.0  0.1   0:00.02 postmaster         
+14970 postgres  10 -10  435m 9072 6936 S  0.0  0.1   0:00.02 postmaster         
+14971 postgres  10 -10  435m 9036 6900 S  0.0  0.1   0:00.02 postmaster         
+14972 postgres  10 -10  435m 8828 6700 S  0.0  0.1   0:00.01 postmaster         
+14973 postgres  10 -10  435m 9096 6960 S  0.0  0.1   0:00.02 postmaster         
+14974 postgres  10 -10  435m 9072 6936 S  0.0  0.1   0:00.01 postmaster         
+14975 postgres  10 -10  435m 8828 6700 S  0.0  0.1   0:00.02 postmaster         
+14996 postgres  10 -10  436m  10m 8852 S  0.0  0.1   0:00.02 postmaster         
+15002 root      20   0     0    0    0 S  0.0  0.0   2:03.29 kworker/3:1        
+15189 postgres  10 -10  435m  10m 8624 S  0.0  0.1   0:00.04 postmaster         
+15267 postgres  10 -10  436m  10m 8580 S  0.0  0.1   0:00.03 postmaster         
+15268 postgres  10 -10  435m  11m 9868 S  0.0  0.1   0:00.08 postmaster         
+15269 postgres  10 -10  435m  10m 8656 S  0.0  0.1   0:00.04 postmaster         
+15270 postgres  10 -10  441m  54m  50m S  0.0  0.7   0:00.15 postmaster         
+15271 postgres  10 -10  435m 9.8m 7840 S  0.0  0.1   0:00.02 postmaster         
+15272 postgres  10 -10  435m 9396 7200 S  0.0  0.1   0:00.02 postmaster         
+15273 postgres  10 -10  436m  37m  35m S  0.0  0.5   0:00.07 postmaster         
+15274 postgres  10 -10  436m  37m  34m S  0.0  0.5   0:00.06 postmaster         
+15276 postgres  10 -10  441m  53m  50m S  0.0  0.7   0:00.15 postmaster         
+15277 postgres  10 -10  442m  96m  91m S  0.0  1.2   0:02.38 postmaster         
+15280 postgres  10 -10  441m  53m  50m S  0.0  0.7   0:00.13 postmaster         
+15281 postgres  10 -10  442m  55m  51m S  0.0  0.7   0:00.17 postmaster         
+15282 postgres  10 -10  436m  36m  34m S  0.0  0.5   0:00.06 postmaster         
+15283 postgres  10 -10  436m 9552 7312 S  0.0  0.1   0:00.02 postmaster         
+15293 postgres  10 -10  436m  10m 9012 S  0.0  0.1   0:00.04 postmaster         
+15294 postgres  10 -10  441m  46m  43m S  0.0  0.6   0:00.23 postmaster         
+15295 postgres  10 -10  442m  47m  43m S  0.0  0.6   0:00.15 postmaster         
+15296 postgres  10 -10  442m  76m  72m S  0.0  1.0   0:00.86 postmaster         
+15297 postgres  10 -10  441m  28m  25m S  0.0  0.4   0:00.31 postmaster         
+15298 postgres  10 -10  442m  54m  50m S  0.0  0.7   0:00.30 postmaster         
+15299 postgres  10 -10  441m  43m  40m S  0.0  0.5   0:00.09 postmaster         
+15300 postgres  10 -10  442m  14m  11m S  0.0  0.2   0:00.04 postmaster         
+15301 postgres  10 -10  441m  14m  11m S  0.0  0.2   0:00.04 postmaster         
+15302 postgres  10 -10  442m  19m  14m S  0.0  0.2   0:00.09 postmaster         
+15303 postgres  10 -10  436m  10m 8320 S  0.0  0.1   0:00.03 postmaster         
+15304 postgres  10 -10  436m 9876 7640 S  0.0  0.1   0:00.02 postmaster         
+15305 postgres  10 -10  440m  13m   9m S  0.0  0.2   0:00.02 postmaster         
+15306 postgres  10 -10  436m 9792 7520 S  0.0  0.1   0:00.02 postmaster         
+15307 postgres  10 -10  436m 9748 7476 S  0.0  0.1   0:00.02 postmaster         
+15308 postgres  10 -10  440m  12m 9976 S  0.0  0.2   0:00.02 postmaster         
+15309 postgres  10 -10  442m  15m  11m S  0.0  0.2   0:00.07 postmaster         
+15334 postgres  10 -10  436m  71m  69m S  0.0  0.9   0:00.11 postmaster         
+15335 postgres  10 -10  436m  71m  69m S  0.0  0.9   0:00.11 postmaster         
+16459 root      20   0     0    0    0 S  0.0  0.0   0:00.04 kworker/u:0        
+17534 root      20   0     0    0    0 S  0.0  0.0  13:00.47 kworker/0:2        
+17629 root      20   0     0    0    0 S  0.0  0.0  17:02.78 kworker/4:1        
+18448 root       0 -20     0    0    0 S  0.0  0.0   7:02.18 loop0              
+19143 root      18  -2 12808  908  528 S  0.0  0.0   0:03.72 udevd              
+19182 root      18  -2 12808  900  520 S  0.0  0.0   0:00.00 udevd              
+20332 root      20   0     0    0    0 S  0.0  0.0   1:53.66 kworker/6:1        
+20426 root      20   0     0    0    0 S  0.0  0.0  19:01.27 kworker/4:0        
+21332 root      20   0     0    0    0 S  0.0  0.0   0:17.15 kworker/2:2        
+21956 root      20   0     0    0    0 S  0.0  0.0   0:00.19 flush-254:9        
+23015 root      20   0     0    0    0 S  0.0  0.0   0:17.88 kworker/2:1        
+24658 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24660 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24663 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24782 root      20   0  4164  332  248 S  0.0  0.0   0:00.00 sleep              
+24840 root      RT   0  738m 4728 3336 S  0.0  0.1 111:25.08 multipathd         
+24882 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24884 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24889 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+25032 root      20   0 41132 1520  904 S  0.0  0.0   0:00.00 crond              
+25034 root      20   0 11432 1460 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
+25052 root      20   0 11432  672  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
+25111 root      20   0     0    0    0 S  0.0  0.0  23:48.70 kworker/1:3        
+27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
+30129 root      20   0  159m  732  500 S  0.0  0.0  10:47.93 squire             
+
+
+
+05/26 18:10:01
+top - 18:10:02 up 444 days,  2:15,  0 users,  load average: 0.96, 0.97, 1.02
+Tasks: 272 total,   3 running, 268 sleeping,   0 stopped,   1 zombie
+Cpu(s):  2.1%us,  1.0%sy,  0.0%ni, 85.4%id, 11.5%wa,  0.0%hi,  0.1%si,  0.0%st
+Mem:   8170096k total,  6932924k used,  1237172k free,   310652k buffers
+Swap:  3146748k total,   905060k used,  2241688k free,  1497536k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 4408 ris       20   0 5289m 787m 3840 S 11.1  9.9  72553:01 java               
+15275 postgres  10 -10  443m 195m 190m R  7.4  2.5   0:20.46 postmaster         
+ 4717 storman   20   0 1582m 637m 1184 S  1.9  8.0  13193:24 storman            
+14961 postgres  10 -10  442m 121m 117m S  1.9  1.5   0:08.58 postmaster         
+15189 postgres  10 -10  442m  61m  58m S  1.9  0.8   0:00.16 postmaster         
+15299 postgres  10 -10  441m  43m  40m S  1.9  0.5   0:00.10 postmaster         
+15301 postgres  10 -10  441m  44m  41m S  1.9  0.6   0:00.11 postmaster         
+30100 root      20   0 15264 1312  860 R  1.9  0.0   0:00.02 top                
+    1 root      20   0 21472 1100  748 S  0.0  0.0   0:02.33 init               
+    2 root      20   0     0    0    0 S  0.0  0.0   0:06.92 kthreadd           
+    3 root      20   0     0    0    0 S  0.0  0.0   7:17.66 ksoftirqd/0        
+    6 root      RT   0     0    0    0 S  0.0  0.0 632045:52 migration/0        
+    7 root      RT   0     0    0    0 S  0.0  0.0 159090:35 migration/1        
+    9 root      20   0     0    0    0 S  0.0  0.0   7:07.78 ksoftirqd/1        
+   10 root      20   0     0    0    0 S  0.0  0.0  24:23.18 kworker/0:1        
+   11 root      RT   0     0    0    0 S  0.0  0.0 637280:21 migration/2        
+   13 root      20   0     0    0    0 S  0.0  0.0   6:51.67 ksoftirqd/2        
+   14 root      RT   0     0    0    0 S  0.0  0.0 626770:01 migration/3        
+   16 root      20   0     0    0    0 S  0.0  0.0   6:39.64 ksoftirqd/3        
+   17 root      RT   0     0    0    0 S  0.0  0.0 613283:55 migration/4        
+   19 root      20   0     0    0    0 S  0.0  0.0   6:34.84 ksoftirqd/4        
+   20 root      RT   0     0    0    0 S  0.0  0.0 571913:25 migration/5        
+   22 root      20   0     0    0    0 S  0.0  0.0   6:51.68 ksoftirqd/5        
+   23 root      RT   0     0    0    0 S  0.0  0.0 635019:35 migration/6        
+   25 root      20   0     0    0    0 S  0.0  0.0   6:06.46 ksoftirqd/6        
+   26 root      RT   0     0    0    0 S  0.0  0.0 633803:10 migration/7        
+   28 root      20   0     0    0    0 S  0.0  0.0   6:10.58 ksoftirqd/7        
+   29 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 cpuset             
+   30 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 khelper            
+   31 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 netns              
+  193 root      20   0     0    0    0 S  0.0  0.0   0:59.08 sync_supers        
+  195 root      20   0     0    0    0 S  0.0  0.0   0:02.41 bdi-default        
+  196 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kintegrityd        
+  198 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kblockd            
+  309 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ata_sff            
+  319 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khubd              
+  334 root      20   0     0    0    0 S  0.0  0.0  28:18.91 kworker/5:1        
+  508 root      20   0     0    0    0 S  0.0  0.0 697:10.90 kswapd0            
+  578 root      20   0     0    0    0 S  0.0  0.0   0:34.73 fsnotify_mark      
+  603 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 crypto             
+  742 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kpsmoused          
+  744 root      20   0     0    0    0 S  0.0  0.0  28:34.97 kworker/5:2        
+  752 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpathd            
+  753 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpath_handlerd    
+  865 root      20   0     0    0    0 S  0.0  0.0   0:00.01 scsi_eh_0          
+  866 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_1          
+  867 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_0      
+  868 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_2          
+  869 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_2          
+  940 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_1      
+  941 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_3          
+  942 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_3          
+ 1074 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1078 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1082 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1087 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1093 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1149 root      20   0     0    0    0 S  0.0  0.0   2:47.29 jbd2/dm-5-8        
+ 1150 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ext4-dio-unwrit    
+ 1184 root      16  -4 12916  896  476 S  0.0  0.0   6:10.15 udevd              
+ 1474 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kauditd            
+ 1478 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kvm-irqfd-clean    
+ 1500 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1598 root      20   0     0    0    0 S  0.0  0.0   0:00.06 kjournald          
+ 1599 root      20   0     0    0    0 S  0.0  0.0  11:16.33 kjournald          
+ 2205 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond0              
+ 2207 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond1              
+ 2385 postgres  10 -10  443m 105m 100m S  0.0  1.3   0:23.52 postmaster         
+ 2563 postgres  10 -10  442m  39m  35m S  0.0  0.5   0:01.20 postmaster         
+ 2568 postgres  10 -10  436m  27m  24m S  0.0  0.3   0:00.21 postmaster         
+ 2610 root      20   0     0    0    0 S  0.0  0.0   3:30.81 flush-254:5        
+ 2611 root      20   0     0    0    0 S  0.0  0.0   6:46.07 flush-254:7        
+ 2682 postgres  10 -10  443m 125m 120m S  0.0  1.6   0:12.38 postmaster         
+ 2683 postgres  10 -10  442m  61m  56m S  0.0  0.8   0:00.92 postmaster         
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.16 ntpd               
+ 2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
+ 2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.60 irqbalance         
+ 3033 root      20   0     0    0    0 S  0.0  0.0   0:06.63 flush-254:10       
+ 3069 postgres  10 -10  441m  15m  11m R  0.0  0.2   0:00.14 postmaster         
+ 3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
+ 3140 root      20   0     0    0    0 S  0.0  0.0   2:34.01 kworker/3:0        
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
+ 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.08 slabd              
+ 3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
+ 3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
+ 3234 root      20   0  6336  604  504 S  0.0  0.0   0:00.00 acpid              
+ 3251 root      39  19     0    0    0 S  0.0  0.0  18685:15 kipmi0             
+ 3263 postgres  10 -10  442m  18m  14m S  0.0  0.2   0:00.22 postmaster         
+ 3283 postgres  10 -10  435m 9836 7640 S  0.0  0.1   0:00.07 postmaster         
+ 3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
+ 3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
+ 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.13 volman             
+ 3506 postgres  10 -10  435m 9576 7380 S  0.0  0.1   0:00.06 postmaster         
+ 3570 postgres  10 -10  435m 9160 6968 S  0.0  0.1   0:00.05 postmaster         
+ 3818 root      20   0     0    0    0 S  0.0  0.0 278:38.10 kjournald          
+ 3946 root      20   0     0    0    0 S  0.0  0.0 209:51.38 kjournald          
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.41 postmaster         
+ 3973 postgres  10 -10  435m 258m 255m S  0.0  3.2 248:48.05 postmaster         
+ 3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  47:00.03 postmaster         
+ 3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:16.58 postmaster         
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
+ 4156 root      20   0  159m  724  496 S  0.0  0.0  12:02.17 squire             
+ 4157 root      20   0  159m  724  496 S  0.0  0.0  12:05.09 squire             
+ 4176 postgres  10 -10  443m  75m  69m S  0.0  0.9   0:02.86 postmaster         
+ 4226 postgres  10 -10  442m  57m  53m S  0.0  0.7   0:00.65 postmaster         
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
+ 4232 root      20   0  311m 1036  760 S  0.0  0.0  11:34.28 timelord           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4274 named     20   0  660m  29m  428 S  0.0  0.4   0:52.62 named              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
+ 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.86 sysmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
+ 4467 postgres  10 -10  443m  58m  53m S  0.0  0.7   0:00.76 postmaster         
+ 4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
+ 4511 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd              
+ 4513 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4              
+ 4514 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4_callbacks    
+ 4515 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4516 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4517 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4518 root      20   0     0    0    0 S  0.0  0.0   0:00.08 nfsd               
+ 4519 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4520 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4521 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4522 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4524 root      20   0 28160 1740  880 S  0.0  0.0   5:46.04 rpc.mountd         
+ 4526 rpcuser   20   0 23412 1140  728 S  0.0  0.0   0:00.05 rpc.statd          
+ 4537 root      20   0 14184 1800  988 S  0.0  0.0  30:48.47 keep_inodes        
+ 4548 root      20   0 10780 1212  892 S  0.0  0.0  20:30.97 watch              
+ 4549 root      20   0 13532 1000  780 S  0.0  0.0   0:00.00 monitor_shell      
+ 4551 root      20   0 15196 1252  868 S  0.0  0.0   1884:53 top                
+ 4554 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
+ 4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
+ 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
+ 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:17.88 java               
+ 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
+ 5197 postgres  10 -10  442m  18m  14m S  0.0  0.2   0:00.23 postmaster         
+ 5198 postgres  10 -10  436m  10m 8224 S  0.0  0.1   0:00.06 postmaster         
+ 5199 postgres  10 -10  436m   9m 7904 S  0.0  0.1   0:00.05 postmaster         
+ 5300 postgres  10 -10  443m 109m 104m S  0.0  1.4   0:38.03 postmaster         
+ 5313 postgres  10 -10  440m  12m 9.8m S  0.0  0.2   0:00.07 postmaster         
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
+ 5450 storman   20   0 1646m 749m 1172 S  0.0  9.4  14151:30 storman            
+ 5519 postgres  10 -10  442m  68m  64m S  0.0  0.9   0:01.25 postmaster         
+ 6174 postgres  10 -10  442m 112m 107m S  0.0  1.4   0:00.41 postmaster         
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6961 root      20   0  315m 1136  744 S  0.0  0.0   8:19.93 risfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
+ 7024 root      20   0  315m  804  396 S  0.0  0.0   8:19.96 risfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
+ 7117 root      20   0  315m  776  412 S  0.0  0.0   8:24.31 risfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
+ 7181 root      20   0  315m  928  500 S  0.0  0.0   8:28.14 risfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 7225 root      20   0  116m 2316 1268 S  0.0  0.0   0:43.82 smbd               
+ 7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7448 root      20   0  246m 5340 1452 S  0.0  0.1 320:01.02 snmpd              
+ 7577 postgres  10 -10  443m 119m 113m S  0.0  1.5   0:01.57 postmaster         
+ 7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.81 irqbalance         
+ 7671 postgres  10 -10  440m  13m  11m S  0.0  0.2   0:00.08 postmaster         
+ 7907 postgres  10 -10  442m  69m  65m S  0.0  0.9   0:10.59 postmaster         
+ 8533 postgres  10 -10  443m 110m 105m S  0.0  1.4   0:02.08 postmaster         
+ 8534 postgres  10 -10  441m  45m  41m S  0.0  0.6   0:00.28 postmaster         
+ 8590 postgres  10 -10  442m  72m  68m S  0.0  0.9   0:00.81 postmaster         
+ 8856 postgres  10 -10  436m  23m  21m S  0.0  0.3   0:00.14 postmaster         
+ 8857 postgres  10 -10  436m  20m  18m S  0.0  0.3   0:00.06 postmaster         
+ 9258 root      20   0     0    0    0 S  0.0  0.0   0:07.56 kworker/7:1        
+10421 root      20   0     0    0    0 S  0.0  0.0   0:42.48 kworker/6:2        
+10508 postgres  10 -10  443m 115m 110m S  0.0  1.5   0:00.93 postmaster         
+10528 postgres  10 -10  433m  18m  16m S  0.0  0.2   0:00.04 postmaster         
+10566 postgres  10 -10  443m 144m 139m S  0.0  1.8   0:22.05 postmaster         
+10567 postgres  10 -10  442m 100m  96m S  0.0  1.3   0:01.01 postmaster         
+10571 postgres  10 -10  440m  18m  15m S  0.0  0.2   0:00.14 postmaster         
+10603 postgres  10 -10  436m 114m 112m S  0.0  1.4   0:00.40 postmaster         
+10906 postgres  10 -10  442m  42m  39m S  0.0  0.5   0:00.13 postmaster         
+10907 postgres  10 -10  436m  10m 8204 S  0.0  0.1   0:00.04 postmaster         
+11332 postgres  10 -10  442m  57m  54m S  0.0  0.7   0:00.64 postmaster         
+11984 root      20   0     0    0    0 S  0.0  0.0   0:00.02 kworker/u:1        
+12356 postgres  10 -10  442m  82m  78m S  0.0  1.0   0:00.38 postmaster         
+12602 postgres  10 -10  442m  48m  45m S  0.0  0.6   0:00.68 postmaster         
+12603 postgres  10 -10  442m  30m  26m S  0.0  0.4   0:00.42 postmaster         
+12604 postgres  10 -10  441m  63m  60m S  0.0  0.8   0:00.52 postmaster         
+13086 postgres  10 -10  442m  43m  39m S  0.0  0.5   0:00.20 postmaster         
+14904 root      20   0     0    0    0 S  0.0  0.0   1:51.65 kworker/7:2        
+14957 postgres  10 -10  436m  28m  26m S  0.0  0.4   0:00.16 postmaster         
+14958 postgres  10 -10  436m  26m  24m S  0.0  0.3   0:00.09 postmaster         
+14959 postgres  10 -10  435m 9336 7144 S  0.0  0.1   0:00.03 postmaster         
+14960 postgres  10 -10  442m  15m  12m S  0.0  0.2   0:00.05 postmaster         
+14962 postgres  10 -10  440m  13m  10m S  0.0  0.2   0:00.04 postmaster         
+14963 postgres  10 -10  436m  22m  20m S  0.0  0.3   0:00.06 postmaster         
+14964 postgres  10 -10  436m  20m  18m S  0.0  0.3   0:00.04 postmaster         
+14965 postgres  10 -10  442m  19m  15m S  0.0  0.2   0:00.74 postmaster         
+14966 postgres  10 -10  443m  58m  53m S  0.0  0.7   0:00.49 postmaster         
+14967 postgres  10 -10  442m  15m  11m S  0.0  0.2   0:00.04 postmaster         
+14968 postgres  10 -10  436m  20m  18m S  0.0  0.3   0:00.04 postmaster         
+14969 postgres  10 -10  442m  78m  75m S  0.0  1.0   0:00.16 postmaster         
+14970 postgres  10 -10  436m  74m  72m S  0.0  0.9   0:00.14 postmaster         
+14971 postgres  10 -10  436m  74m  72m S  0.0  0.9   0:00.13 postmaster         
+14972 postgres  10 -10  436m  10m 8428 S  0.0  0.1   0:00.04 postmaster         
+14973 postgres  10 -10  442m  15m  12m S  0.0  0.2   0:00.06 postmaster         
+14974 postgres  10 -10  436m 9600 7400 S  0.0  0.1   0:00.02 postmaster         
+14975 postgres  10 -10  436m  18m  16m S  0.0  0.2   0:00.21 postmaster         
+14996 postgres  10 -10  436m  76m  73m S  0.0  1.0   0:00.15 postmaster         
+15002 root      20   0     0    0    0 S  0.0  0.0   2:03.29 kworker/3:1        
+15267 postgres  10 -10  436m  26m  24m S  0.0  0.3   0:00.07 postmaster         
+15268 postgres  10 -10  436m  58m  56m S  0.0  0.7   0:00.18 postmaster         
+15269 postgres  10 -10  436m  57m  55m S  0.0  0.7   0:00.13 postmaster         
+15270 postgres  10 -10  441m  54m  51m S  0.0  0.7   0:00.16 postmaster         
+15271 postgres  10 -10  435m  10m 8104 S  0.0  0.1   0:00.03 postmaster         
+15272 postgres  10 -10  435m 9396 7200 S  0.0  0.1   0:00.03 postmaster         
+15273 postgres  10 -10  442m  41m  37m S  0.0  0.5   0:00.10 postmaster         
+15274 postgres  10 -10  436m  37m  34m S  0.0  0.5   0:00.07 postmaster         
+15276 postgres  10 -10  441m  55m  52m S  0.0  0.7   0:00.18 postmaster         
+15277 postgres  10 -10  442m  98m  93m D  0.0  1.2   0:02.87 postmaster         
+15280 postgres  10 -10  441m  53m  50m S  0.0  0.7   0:00.14 postmaster         
+15281 postgres  10 -10  442m  56m  52m S  0.0  0.7   0:00.19 postmaster         
+15282 postgres  10 -10  436m  36m  34m S  0.0  0.5   0:00.06 postmaster         
+15283 postgres  10 -10  436m 9552 7312 S  0.0  0.1   0:00.02 postmaster         
+15293 postgres  10 -10  436m  10m 9012 S  0.0  0.1   0:00.05 postmaster         
+15294 postgres  10 -10  442m  46m  43m S  0.0  0.6   0:00.24 postmaster         
+15295 postgres  10 -10  442m  48m  44m S  0.0  0.6   0:00.17 postmaster         
+15296 postgres  10 -10  442m 105m 100m S  0.0  1.3   0:01.15 postmaster         
+15297 postgres  10 -10  442m  59m  55m S  0.0  0.7   0:00.43 postmaster         
+15298 postgres  10 -10  442m  55m  51m S  0.0  0.7   0:00.62 postmaster         
+15300 postgres  10 -10  442m  25m  22m S  0.0  0.3   0:00.08 postmaster         
+15302 postgres  10 -10  442m  50m  45m S  0.0  0.6   0:00.18 postmaster         
+15303 postgres  10 -10  436m  10m 8580 S  0.0  0.1   0:00.04 postmaster         
+15304 postgres  10 -10  442m  19m  15m S  0.0  0.3   0:00.11 postmaster         
+15305 postgres  10 -10  440m  13m   9m S  0.0  0.2   0:00.03 postmaster         
+15306 postgres  10 -10  436m 9792 7520 S  0.0  0.1   0:00.02 postmaster         
+15307 postgres  10 -10  436m 9748 7476 S  0.0  0.1   0:00.02 postmaster         
+15308 postgres  10 -10  440m  12m 9976 S  0.0  0.2   0:00.03 postmaster         
+15309 postgres  10 -10  442m  15m  12m S  0.0  0.2   0:00.08 postmaster         
+15334 postgres  10 -10  436m  71m  69m S  0.0  0.9   0:00.12 postmaster         
+15335 postgres  10 -10  436m  71m  69m S  0.0  0.9   0:00.12 postmaster         
+16459 root      20   0     0    0    0 S  0.0  0.0   0:00.06 kworker/u:0        
+17534 root      20   0     0    0    0 S  0.0  0.0  13:00.50 kworker/0:2        
+17629 root      20   0     0    0    0 S  0.0  0.0  17:02.78 kworker/4:1        
+18448 root       0 -20     0    0    0 S  0.0  0.0   7:02.18 loop0              
+19143 root      18  -2 12808  908  528 S  0.0  0.0   0:03.76 udevd              
+19182 root      18  -2 12808  900  520 S  0.0  0.0   0:00.00 udevd              
+20332 root      20   0     0    0    0 S  0.0  0.0   1:53.67 kworker/6:1        
+20426 root      20   0     0    0    0 S  0.0  0.0  19:01.27 kworker/4:0        
+21332 root      20   0     0    0    0 S  0.0  0.0   0:17.18 kworker/2:2        
+21956 root      20   0     0    0    0 S  0.0  0.0   0:00.20 flush-254:9        
+23015 root      20   0     0    0    0 S  0.0  0.0   0:17.88 kworker/2:1        
+24658 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24660 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24663 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24840 root      RT   0  738m 4728 3336 S  0.0  0.1 111:25.15 multipathd         
+24882 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24884 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24889 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+25111 root      20   0     0    0    0 S  0.0  0.0  23:48.73 kworker/1:3        
+27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
+29951 root      20   0  4164  332  248 S  0.0  0.0   0:00.00 sleep              
+30078 root      20   0 41132 1520  904 S  0.0  0.0   0:00.00 crond              
+30079 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
+30098 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
+30129 root      20   0  159m  728  496 S  0.0  0.0  10:47.94 squire             
+
+
+
+05/26 18:15:01
+top - 18:15:02 up 444 days,  2:20,  0 users,  load average: 1.03, 1.02, 1.04
+Tasks: 209 total,   1 running, 207 sleeping,   0 stopped,   1 zombie
+Cpu(s):  2.1%us,  1.0%sy,  0.0%ni, 85.4%id, 11.5%wa,  0.0%hi,  0.1%si,  0.0%st
+Mem:   8170096k total,  7140528k used,  1029568k free,   346636k buffers
+Swap:  3146748k total,   905060k used,  2241688k free,  1908268k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 4408 ris       20   0 5289m 787m 3840 S 37.3  9.9  72553:35 java               
+31816 postgres  10 -10  442m  57m  53m S 27.5  0.7   0:00.40 postmaster         
+ 4717 storman   20   0 1582m 637m 1184 S  3.9  8.0  13193:28 storman            
+ 5450 storman   20   0 1646m 749m 1172 S  3.9  9.4  14151:34 storman            
+ 2599 root      20   0 15132 1248  860 R  2.0  0.0   0:00.01 top                
+ 3818 root      20   0     0    0    0 S  2.0  0.0 278:38.65 kjournald          
+ 3946 root      20   0     0    0    0 S  2.0  0.0 209:51.93 kjournald          
+31812 postgres  10 -10  443m 105m 101m S  2.0  1.3   0:07.23 postmaster         
+31934 postgres  10 -10  442m  15m  11m S  2.0  0.2   0:00.02 postmaster         
+    1 root      20   0 21472 1100  748 S  0.0  0.0   0:02.33 init               
+    2 root      20   0     0    0    0 S  0.0  0.0   0:06.92 kthreadd           
+    3 root      20   0     0    0    0 S  0.0  0.0   7:17.66 ksoftirqd/0        
+    6 root      RT   0     0    0    0 S  0.0  0.0 632045:52 migration/0        
+    7 root      RT   0     0    0    0 S  0.0  0.0 159090:35 migration/1        
+    9 root      20   0     0    0    0 S  0.0  0.0   7:07.78 ksoftirqd/1        
+   10 root      20   0     0    0    0 S  0.0  0.0  24:23.18 kworker/0:1        
+   11 root      RT   0     0    0    0 S  0.0  0.0 637280:21 migration/2        
+   13 root      20   0     0    0    0 S  0.0  0.0   6:51.67 ksoftirqd/2        
+   14 root      RT   0     0    0    0 S  0.0  0.0 626770:01 migration/3        
+   16 root      20   0     0    0    0 S  0.0  0.0   6:39.64 ksoftirqd/3        
+   17 root      RT   0     0    0    0 S  0.0  0.0 613283:55 migration/4        
+   19 root      20   0     0    0    0 S  0.0  0.0   6:34.84 ksoftirqd/4        
+   20 root      RT   0     0    0    0 S  0.0  0.0 571913:25 migration/5        
+   22 root      20   0     0    0    0 S  0.0  0.0   6:51.69 ksoftirqd/5        
+   23 root      RT   0     0    0    0 S  0.0  0.0 635019:35 migration/6        
+   25 root      20   0     0    0    0 S  0.0  0.0   6:06.46 ksoftirqd/6        
+   26 root      RT   0     0    0    0 S  0.0  0.0 633803:10 migration/7        
+   28 root      20   0     0    0    0 S  0.0  0.0   6:10.58 ksoftirqd/7        
+   29 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 cpuset             
+   30 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 khelper            
+   31 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 netns              
+  193 root      20   0     0    0    0 S  0.0  0.0   0:59.08 sync_supers        
+  195 root      20   0     0    0    0 S  0.0  0.0   0:02.41 bdi-default        
+  196 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kintegrityd        
+  198 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kblockd            
+  309 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ata_sff            
+  319 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khubd              
+  334 root      20   0     0    0    0 S  0.0  0.0  28:18.91 kworker/5:1        
+  508 root      20   0     0    0    0 S  0.0  0.0 697:10.95 kswapd0            
+  578 root      20   0     0    0    0 S  0.0  0.0   0:34.73 fsnotify_mark      
+  603 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 crypto             
+  742 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kpsmoused          
+  744 root      20   0     0    0    0 S  0.0  0.0  28:35.00 kworker/5:2        
+  752 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpathd            
+  753 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpath_handlerd    
+  810 postgres  10 -10  442m  14m  10m S  0.0  0.2   0:00.03 postmaster         
+  824 postgres  10 -10  433m 8196 6112 S  0.0  0.1   0:00.00 postmaster         
+  865 root      20   0     0    0    0 S  0.0  0.0   0:00.01 scsi_eh_0          
+  866 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_1          
+  867 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_0      
+  868 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_2          
+  869 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_2          
+  940 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_1      
+  941 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_3          
+  942 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_3          
+ 1018 postgres  10 -10  433m 7928 5848 S  0.0  0.1   0:00.00 postmaster         
+ 1019 postgres  10 -10  433m 7932 5848 S  0.0  0.1   0:00.00 postmaster         
+ 1020 postgres  10 -10  433m 7932 5852 S  0.0  0.1   0:00.00 postmaster         
+ 1023 postgres  10 -10  433m 8196 6112 S  0.0  0.1   0:00.00 postmaster         
+ 1074 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1078 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1082 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1087 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1093 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1149 root      20   0     0    0    0 S  0.0  0.0   2:47.29 jbd2/dm-5-8        
+ 1150 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ext4-dio-unwrit    
+ 1184 root      16  -4 12916  896  476 S  0.0  0.0   6:10.16 udevd              
+ 1474 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kauditd            
+ 1478 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kvm-irqfd-clean    
+ 1500 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1598 root      20   0     0    0    0 S  0.0  0.0   0:00.06 kjournald          
+ 1599 root      20   0     0    0    0 S  0.0  0.0  11:16.34 kjournald          
+ 2205 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond0              
+ 2207 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond1              
+ 2509 root      20   0  4164  336  248 S  0.0  0.0   0:00.00 sleep              
+ 2578 root      20   0 41132 1528  912 S  0.0  0.0   0:00.00 crond              
+ 2580 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
+ 2597 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
+ 2600 postgres  10 -10  433m 7932 5912 S  0.0  0.1   0:00.00 postmaster         
+ 2610 root      20   0     0    0    0 S  0.0  0.0   3:30.81 flush-254:5        
+ 2611 root      20   0     0    0    0 S  0.0  0.0   6:46.07 flush-254:7        
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.17 ntpd               
+ 2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
+ 2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.65 irqbalance         
+ 3033 root      20   0     0    0    0 S  0.0  0.0   0:06.68 flush-254:10       
+ 3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
+ 3140 root      20   0     0    0    0 S  0.0  0.0   2:34.03 kworker/3:0        
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
+ 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.09 slabd              
+ 3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
+ 3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
+ 3234 root      20   0  6336  604  504 S  0.0  0.0   0:00.00 acpid              
+ 3251 root      39  19     0    0    0 S  0.0  0.0  18685:24 kipmi0             
+ 3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
+ 3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
+ 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.18 volman             
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.42 postmaster         
+ 3973 postgres  10 -10  435m 258m 255m S  0.0  3.2 248:48.20 postmaster         
+ 3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  47:00.06 postmaster         
+ 3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:16.77 postmaster         
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
+ 4156 root      20   0  159m  724  496 S  0.0  0.0  12:02.18 squire             
+ 4157 root      20   0  159m  724  496 S  0.0  0.0  12:05.09 squire             
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
+ 4232 root      20   0  311m 1036  760 S  0.0  0.0  11:34.28 timelord           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4274 named     20   0  660m  29m  428 S  0.0  0.4   0:52.62 named              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
+ 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.99 sysmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
+ 4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
+ 4511 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd              
+ 4513 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4              
+ 4514 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4_callbacks    
+ 4515 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4516 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4517 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4518 root      20   0     0    0    0 S  0.0  0.0   0:00.08 nfsd               
+ 4519 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4520 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4521 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4522 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4524 root      20   0 28160 1740  880 S  0.0  0.0   5:46.04 rpc.mountd         
+ 4526 rpcuser   20   0 23412 1140  728 S  0.0  0.0   0:00.05 rpc.statd          
+ 4537 root      20   0 14184 1800  988 S  0.0  0.0  30:48.48 keep_inodes        
+ 4548 root      20   0 10780 1212  892 S  0.0  0.0  20:30.97 watch              
+ 4549 root      20   0 13532 1000  780 S  0.0  0.0   0:00.00 monitor_shell      
+ 4551 root      20   0 15196 1252  868 S  0.0  0.0   1884:54 top                
+ 4554 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
+ 4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
+ 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
+ 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:18.05 java               
+ 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6961 root      20   0  315m 1132  740 S  0.0  0.0   8:19.94 risfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
+ 7024 root      20   0  315m  800  392 S  0.0  0.0   8:19.98 risfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
+ 7117 root      20   0  315m  772  408 S  0.0  0.0   8:24.31 risfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
+ 7181 root      20   0  315m  924  496 S  0.0  0.0   8:28.14 risfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 7225 root      20   0  116m 2308 1260 S  0.0  0.0   0:43.82 smbd               
+ 7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7448 root      20   0  246m 5340 1452 S  0.0  0.1 320:01.11 snmpd              
+ 7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.87 irqbalance         
+ 9258 root      20   0     0    0    0 S  0.0  0.0   0:07.56 kworker/7:1        
+10421 root      20   0     0    0    0 S  0.0  0.0   0:42.48 kworker/6:2        
+11984 root      20   0     0    0    0 S  0.0  0.0   0:00.02 kworker/u:1        
+14904 root      20   0     0    0    0 S  0.0  0.0   1:51.68 kworker/7:2        
+15002 root      20   0     0    0    0 S  0.0  0.0   2:03.29 kworker/3:1        
+16459 root      20   0     0    0    0 S  0.0  0.0   0:00.09 kworker/u:0        
+17534 root      20   0     0    0    0 S  0.0  0.0  13:00.52 kworker/0:2        
+17629 root      20   0     0    0    0 S  0.0  0.0  17:02.78 kworker/4:1        
+18448 root       0 -20     0    0    0 S  0.0  0.0   7:02.19 loop0              
+19143 root      18  -2 12808  908  528 S  0.0  0.0   0:03.80 udevd              
+19182 root      18  -2 12808  900  520 S  0.0  0.0   0:00.00 udevd              
+20332 root      20   0     0    0    0 S  0.0  0.0   1:53.68 kworker/6:1        
+20426 root      20   0     0    0    0 S  0.0  0.0  19:01.27 kworker/4:0        
+21332 root      20   0     0    0    0 S  0.0  0.0   0:17.21 kworker/2:2        
+21956 root      20   0     0    0    0 S  0.0  0.0   0:00.21 flush-254:9        
+23015 root      20   0     0    0    0 S  0.0  0.0   0:17.88 kworker/2:1        
+24658 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24660 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24663 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24840 root      RT   0  738m 4728 3336 S  0.0  0.1 111:25.21 multipathd         
+24882 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24884 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24889 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+25111 root      20   0     0    0    0 S  0.0  0.0  23:48.76 kworker/1:3        
+27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
+30129 root      20   0  159m  728  496 S  0.0  0.0  10:47.94 squire             
+31299 postgres  10 -10  443m  59m  54m S  0.0  0.7   0:00.47 postmaster         
+31754 postgres  10 -10  442m  23m  19m S  0.0  0.3   0:00.20 postmaster         
+31813 postgres  10 -10  442m  69m  66m S  0.0  0.9   0:00.60 postmaster         
+31814 postgres  10 -10  442m  14m  11m S  0.0  0.2   0:00.06 postmaster         
+31815 postgres  10 -10  441m  14m  11m S  0.0  0.2   0:00.04 postmaster         
+31818 postgres  10 -10  442m  31m  27m S  0.0  0.4   0:00.43 postmaster         
+31819 postgres  10 -10  441m  15m  12m S  0.0  0.2   0:00.08 postmaster         
+31820 postgres  10 -10  442m  53m  49m S  0.0  0.7   0:00.16 postmaster         
+31821 postgres  10 -10  436m 9.8m 7692 S  0.0  0.1   0:00.00 postmaster         
+31822 postgres  10 -10  442m  54m  51m S  0.0  0.7   0:00.33 postmaster         
+31823 postgres  10 -10  440m  13m  10m S  0.0  0.2   0:00.02 postmaster         
+31826 postgres  10 -10  441m  14m  11m S  0.0  0.2   0:00.03 postmaster         
+31828 postgres  10 -10  436m 9816 7512 S  0.0  0.1   0:00.01 postmaster         
+31829 postgres  10 -10  440m  12m  10m S  0.0  0.2   0:00.02 postmaster         
+31830 postgres  10 -10  433m 7208 5292 S  0.0  0.1   0:00.00 postmaster         
+31832 postgres  10 -10  442m  17m  13m S  0.0  0.2   0:00.05 postmaster         
+31851 postgres  10 -10  440m  12m 9672 S  0.0  0.2   0:00.01 postmaster         
+31856 postgres  10 -10  435m 8916 6788 S  0.0  0.1   0:00.00 postmaster         
+31857 postgres  10 -10  435m 8916 6788 S  0.0  0.1   0:00.00 postmaster         
+31872 postgres  10 -10  442m  15m  11m S  0.0  0.2   0:00.03 postmaster         
+31943 postgres  10 -10  440m  12m   9m S  0.0  0.2   0:00.01 postmaster         
+32179 postgres  10 -10  442m  14m  10m S  0.0  0.2   0:00.02 postmaster         
+32305 postgres  10 -10  440m  12m 9652 S  0.0  0.2   0:00.01 postmaster         
+32373 postgres  10 -10  435m 8944 6824 S  0.0  0.1   0:00.00 postmaster         
+
+
+
+05/26 18:20:01
+top - 18:20:01 up 444 days,  2:25,  0 users,  load average: 1.87, 1.36, 1.16
+Tasks: 223 total,   1 running, 221 sleeping,   0 stopped,   1 zombie
+Cpu(s):  2.1%us,  1.0%sy,  0.0%ni, 85.4%id, 11.5%wa,  0.0%hi,  0.1%si,  0.0%st
+Mem:   8170096k total,  7133204k used,  1036892k free,   367852k buffers
+Swap:  3146748k total,   905060k used,  2241688k free,  1818496k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 4408 ris       20   0 5289m 791m 3840 S 33.4  9.9  72554:41 java               
+31819 postgres  10 -10  443m  72m  68m D 19.6  0.9   0:15.18 postmaster         
+ 5450 storman   20   0 1648m 751m 1172 S  7.9  9.4  14151:39 storman            
+ 4717 storman   20   0 1582m 637m 1184 S  2.0  8.0  13193:33 storman            
+ 5425 postgres  10 -10  442m  17m  13m S  2.0  0.2   0:00.15 postmaster         
+ 6346 root      20   0 15132 1268  860 R  2.0  0.0   0:00.01 top                
+    1 root      20   0 21472 1100  748 S  0.0  0.0   0:02.33 init               
+    2 root      20   0     0    0    0 S  0.0  0.0   0:06.92 kthreadd           
+    3 root      20   0     0    0    0 S  0.0  0.0   7:17.67 ksoftirqd/0        
+    6 root      RT   0     0    0    0 S  0.0  0.0 632045:52 migration/0        
+    7 root      RT   0     0    0    0 S  0.0  0.0 159090:35 migration/1        
+    9 root      20   0     0    0    0 S  0.0  0.0   7:07.78 ksoftirqd/1        
+   10 root      20   0     0    0    0 S  0.0  0.0  24:23.18 kworker/0:1        
+   11 root      RT   0     0    0    0 S  0.0  0.0 637280:21 migration/2        
+   13 root      20   0     0    0    0 S  0.0  0.0   6:51.67 ksoftirqd/2        
+   14 root      RT   0     0    0    0 S  0.0  0.0 626770:01 migration/3        
+   16 root      20   0     0    0    0 S  0.0  0.0   6:39.65 ksoftirqd/3        
+   17 root      RT   0     0    0    0 S  0.0  0.0 613283:55 migration/4        
+   19 root      20   0     0    0    0 S  0.0  0.0   6:34.84 ksoftirqd/4        
+   20 root      RT   0     0    0    0 S  0.0  0.0 571913:25 migration/5        
+   22 root      20   0     0    0    0 S  0.0  0.0   6:51.69 ksoftirqd/5        
+   23 root      RT   0     0    0    0 S  0.0  0.0 635019:35 migration/6        
+   25 root      20   0     0    0    0 S  0.0  0.0   6:06.47 ksoftirqd/6        
+   26 root      RT   0     0    0    0 S  0.0  0.0 633803:10 migration/7        
+   28 root      20   0     0    0    0 S  0.0  0.0   6:10.58 ksoftirqd/7        
+   29 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 cpuset             
+   30 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 khelper            
+   31 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 netns              
+  193 root      20   0     0    0    0 S  0.0  0.0   0:59.08 sync_supers        
+  195 root      20   0     0    0    0 S  0.0  0.0   0:02.41 bdi-default        
+  196 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kintegrityd        
+  198 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kblockd            
+  309 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ata_sff            
+  319 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khubd              
+  334 root      20   0     0    0    0 S  0.0  0.0  28:18.91 kworker/5:1        
+  508 root      20   0     0    0    0 S  0.0  0.0 697:11.23 kswapd0            
+  578 root      20   0     0    0    0 S  0.0  0.0   0:34.73 fsnotify_mark      
+  603 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 crypto             
+  742 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kpsmoused          
+  744 root      20   0     0    0    0 S  0.0  0.0  28:35.03 kworker/5:2        
+  752 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpathd            
+  753 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpath_handlerd    
+  810 postgres  10 -10  442m  15m  11m S  0.0  0.2   0:00.10 postmaster         
+  824 postgres  10 -10  433m 8196 6112 S  0.0  0.1   0:00.02 postmaster         
+  865 root      20   0     0    0    0 S  0.0  0.0   0:00.01 scsi_eh_0          
+  866 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_1          
+  867 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_0      
+  868 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_2          
+  869 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_2          
+  940 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_1      
+  941 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_3          
+  942 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_3          
+ 1018 postgres  10 -10  433m 7928 5848 S  0.0  0.1   0:00.02 postmaster         
+ 1019 postgres  10 -10  433m 7932 5848 S  0.0  0.1   0:00.01 postmaster         
+ 1020 postgres  10 -10  433m 7932 5852 S  0.0  0.1   0:00.01 postmaster         
+ 1023 postgres  10 -10  435m 9212 7080 S  0.0  0.1   0:00.03 postmaster         
+ 1074 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1078 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1082 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1087 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1093 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1149 root      20   0     0    0    0 S  0.0  0.0   2:47.29 jbd2/dm-5-8        
+ 1150 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ext4-dio-unwrit    
+ 1184 root      16  -4 12916  896  476 S  0.0  0.0   6:10.17 udevd              
+ 1474 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kauditd            
+ 1478 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kvm-irqfd-clean    
+ 1500 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1598 root      20   0     0    0    0 S  0.0  0.0   0:00.06 kjournald          
+ 1599 root      20   0     0    0    0 S  0.0  0.0  11:16.35 kjournald          
+ 2205 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond0              
+ 2207 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond1              
+ 2600 postgres  10 -10  435m 9096 6964 S  0.0  0.1   0:00.02 postmaster         
+ 2610 root      20   0     0    0    0 S  0.0  0.0   3:30.82 flush-254:5        
+ 2611 root      20   0     0    0    0 S  0.0  0.0   6:46.07 flush-254:7        
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.18 ntpd               
+ 2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
+ 2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.69 irqbalance         
+ 3033 root      20   0     0    0    0 S  0.0  0.0   0:06.77 flush-254:10       
+ 3101 postgres  10 -10  435m 8928 6804 S  0.0  0.1   0:00.01 postmaster         
+ 3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
+ 3140 root      20   0     0    0    0 S  0.0  0.0   2:34.04 kworker/3:0        
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
+ 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.09 slabd              
+ 3161 postgres  10 -10  440m  13m  10m S  0.0  0.2   0:00.04 postmaster         
+ 3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
+ 3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
+ 3234 root      20   0  6336  604  504 S  0.0  0.0   0:00.00 acpid              
+ 3251 root      39  19     0    0    0 S  0.0  0.0  18685:33 kipmi0             
+ 3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
+ 3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
+ 3417 root      20   0  691m 2632 2088 S  0.0  0.0  96:06.22 volman             
+ 3611 postgres  10 -10  442m  65m  62m S  0.0  0.8   0:01.64 postmaster         
+ 3625 postgres  10 -10  435m 8764 6648 S  0.0  0.1   0:00.01 postmaster         
+ 3626 postgres  10 -10  433m 7932 5896 S  0.0  0.1   0:00.01 postmaster         
+ 3627 postgres  10 -10  433m 7932 5908 S  0.0  0.1   0:00.01 postmaster         
+ 3761 postgres  10 -10  435m 8904 6780 S  0.0  0.1   0:00.01 postmaster         
+ 3762 postgres  10 -10  435m 8904 6780 S  0.0  0.1   0:00.01 postmaster         
+ 3818 root      20   0     0    0    0 S  0.0  0.0 278:39.76 kjournald          
+ 3946 root      20   0     0    0    0 S  0.0  0.0 209:52.76 kjournald          
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.43 postmaster         
+ 3973 postgres  10 -10  435m 258m 255m S  0.0  3.2 248:48.44 postmaster         
+ 3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  47:00.09 postmaster         
+ 3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:17.30 postmaster         
+ 3991 postgres  10 -10  435m 8812 6696 S  0.0  0.1   0:00.01 postmaster         
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
+ 4156 root      20   0  159m  712  484 S  0.0  0.0  12:02.18 squire             
+ 4157 root      20   0  159m  712  484 S  0.0  0.0  12:05.10 squire             
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
+ 4232 root      20   0  311m 1032  756 S  0.0  0.0  11:34.28 timelord           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4274 named     20   0  660m  29m  428 S  0.0  0.4   0:52.62 named              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
+ 4340 root      20   0 2155m 1.3g  764 S  0.0 17.1 247:06.10 sysmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
+ 4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
+ 4511 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd              
+ 4513 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4              
+ 4514 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4_callbacks    
+ 4515 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4516 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4517 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4518 root      20   0     0    0    0 S  0.0  0.0   0:00.08 nfsd               
+ 4519 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4520 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4521 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4522 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4524 root      20   0 28160 1740  880 S  0.0  0.0   5:46.05 rpc.mountd         
+ 4526 rpcuser   20   0 23412 1140  728 S  0.0  0.0   0:00.05 rpc.statd          
+ 4537 root      20   0 14184 1800  988 S  0.0  0.0  30:48.50 keep_inodes        
+ 4548 root      20   0 10780 1212  892 S  0.0  0.0  20:30.99 watch              
+ 4549 root      20   0 13532 1000  780 S  0.0  0.0   0:00.00 monitor_shell      
+ 4551 root      20   0 15196 1252  868 S  0.0  0.0   1884:55 top                
+ 4554 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
+ 4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
+ 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
+ 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:18.25 java               
+ 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
+ 5463 postgres  10 -10  442m  15m  11m S  0.0  0.2   0:00.04 postmaster         
+ 5464 postgres  10 -10  433m 8204 6120 S  0.0  0.1   0:00.00 postmaster         
+ 5465 postgres  10 -10  433m 8204 6120 S  0.0  0.1   0:00.00 postmaster         
+ 5466 postgres  10 -10  433m 7940 5872 S  0.0  0.1   0:00.01 postmaster         
+ 6290 root      20   0  4164  332  248 S  0.0  0.0   0:00.00 sleep              
+ 6324 root      20   0 41132 1520  904 S  0.0  0.0   0:00.00 crond              
+ 6326 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
+ 6344 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6961 root      20   0  315m 1128  736 S  0.0  0.0   8:19.94 risfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
+ 7024 root      20   0  315m  796  388 S  0.0  0.0   8:19.98 risfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
+ 7117 root      20   0  315m  768  404 S  0.0  0.0   8:24.31 risfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
+ 7181 root      20   0  315m  920  492 S  0.0  0.0   8:28.14 risfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 7225 root      20   0  116m 2308 1260 S  0.0  0.0   0:43.82 smbd               
+ 7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7448 root      20   0  246m 5332 1444 S  0.0  0.1 320:01.19 snmpd              
+ 7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.92 irqbalance         
+ 9258 root      20   0     0    0    0 S  0.0  0.0   0:07.56 kworker/7:1        
+10421 root      20   0     0    0    0 S  0.0  0.0   0:42.48 kworker/6:2        
+11984 root      20   0     0    0    0 S  0.0  0.0   0:00.02 kworker/u:1        
+14904 root      20   0     0    0    0 S  0.0  0.0   1:51.70 kworker/7:2        
+15002 root      20   0     0    0    0 S  0.0  0.0   2:03.29 kworker/3:1        
+16459 root      20   0     0    0    0 S  0.0  0.0   0:00.12 kworker/u:0        
+17534 root      20   0     0    0    0 S  0.0  0.0  13:00.55 kworker/0:2        
+17629 root      20   0     0    0    0 S  0.0  0.0  17:02.79 kworker/4:1        
+18448 root       0 -20     0    0    0 S  0.0  0.0   7:02.19 loop0              
+19143 root      18  -2 12808  908  528 S  0.0  0.0   0:03.83 udevd              
+19182 root      18  -2 12808  900  520 S  0.0  0.0   0:00.00 udevd              
+20332 root      20   0     0    0    0 S  0.0  0.0   1:53.69 kworker/6:1        
+20426 root      20   0     0    0    0 S  0.0  0.0  19:01.27 kworker/4:0        
+21332 root      20   0     0    0    0 S  0.0  0.0   0:17.25 kworker/2:2        
+21956 root      20   0     0    0    0 S  0.0  0.0   0:00.22 flush-254:9        
+23015 root      20   0     0    0    0 S  0.0  0.0   0:17.88 kworker/2:1        
+24658 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24660 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24663 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24840 root      RT   0  738m 4728 3336 S  0.0  0.1 111:25.28 multipathd         
+24882 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24884 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24889 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+25111 root      20   0     0    0    0 S  0.0  0.0  23:48.78 kworker/1:3        
+27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
+30129 root      20   0  159m  716  484 S  0.0  0.0  10:47.95 squire             
+31299 postgres  10 -10  443m  63m  57m S  0.0  0.8   0:00.90 postmaster         
+31754 postgres  10 -10  442m  29m  26m S  0.0  0.4   0:00.45 postmaster         
+31812 postgres  10 -10  443m 117m 113m S  0.0  1.5   0:10.29 postmaster         
+31813 postgres  10 -10  442m  74m  71m S  0.0  0.9   0:00.85 postmaster         
+31814 postgres  10 -10  442m  16m  12m S  0.0  0.2   0:00.16 postmaster         
+31815 postgres  10 -10  442m  53m  49m S  0.0  0.7   0:00.21 postmaster         
+31816 postgres  10 -10  442m  60m  55m S  0.0  0.8   0:02.34 postmaster         
+31818 postgres  10 -10  442m  35m  31m S  0.0  0.4   0:00.60 postmaster         
+31820 postgres  10 -10  442m  54m  51m S  0.0  0.7   0:00.27 postmaster         
+31821 postgres  10 -10  440m  12m 9.9m S  0.0  0.2   0:00.03 postmaster         
+31822 postgres  10 -10  442m  58m  55m S  0.0  0.7   0:01.04 postmaster         
+31823 postgres  10 -10  440m  16m  13m S  0.0  0.2   0:00.07 postmaster         
+31826 postgres  10 -10  442m  15m  11m S  0.0  0.2   0:00.05 postmaster         
+31828 postgres  10 -10  436m 9816 7512 S  0.0  0.1   0:00.02 postmaster         
+31829 postgres  10 -10  440m  14m  11m S  0.0  0.2   0:00.06 postmaster         
+31830 postgres  10 -10  433m 8224 6232 S  0.0  0.1   0:00.02 postmaster         
+31832 postgres  10 -10  442m  18m  14m S  0.0  0.2   0:00.10 postmaster         
+31851 postgres  10 -10  442m  88m  84m S  0.0  1.1   0:23.75 postmaster         
+31856 postgres  10 -10  435m 8916 6788 S  0.0  0.1   0:00.02 postmaster         
+31857 postgres  10 -10  435m 8916 6788 S  0.0  0.1   0:00.02 postmaster         
+31872 postgres  10 -10  442m  16m  12m S  0.0  0.2   0:00.06 postmaster         
+31934 postgres  10 -10  442m  16m  12m S  0.0  0.2   0:00.21 postmaster         
+31943 postgres  10 -10  440m  14m  12m S  0.0  0.2   0:00.06 postmaster         
+32179 postgres  10 -10  442m  14m  10m S  0.0  0.2   0:00.04 postmaster         
+32305 postgres  10 -10  442m  16m  12m S  0.0  0.2   0:00.06 postmaster         
+32373 postgres  10 -10  442m  60m  56m S  0.0  0.8   0:01.65 postmaster         
+
+
+
+05/26 18:25:01
+top - 18:25:02 up 444 days,  2:30,  0 users,  load average: 1.83, 1.77, 1.40
+Tasks: 232 total,   1 running, 230 sleeping,   0 stopped,   1 zombie
+Cpu(s):  2.1%us,  1.0%sy,  0.0%ni, 85.4%id, 11.5%wa,  0.0%hi,  0.1%si,  0.0%st
+Mem:   8170096k total,  7185476k used,   984620k free,   376800k buffers
+Swap:  3146748k total,   905060k used,  2241688k free,  1831392k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 4408 ris       20   0 5289m 787m 3840 S  7.8  9.9  72555:55 java               
+ 3033 root      20   0     0    0    0 S  3.9  0.0   0:06.89 flush-254:10       
+ 4551 root      20   0 15196 1252  868 S  2.0  0.0   1884:56 top                
+ 4717 storman   20   0 1582m 638m 1184 S  2.0  8.0  13193:38 storman            
+ 5450 storman   20   0 1646m 749m 1172 S  2.0  9.4  14151:45 storman            
+    1 root      20   0 21472 1100  748 S  0.0  0.0   0:02.33 init               
+    2 root      20   0     0    0    0 S  0.0  0.0   0:06.92 kthreadd           
+    3 root      20   0     0    0    0 S  0.0  0.0   7:17.67 ksoftirqd/0        
+    6 root      RT   0     0    0    0 S  0.0  0.0 632045:52 migration/0        
+    7 root      RT   0     0    0    0 S  0.0  0.0 159090:35 migration/1        
+    9 root      20   0     0    0    0 S  0.0  0.0   7:07.78 ksoftirqd/1        
+   10 root      20   0     0    0    0 S  0.0  0.0  24:23.18 kworker/0:1        
+   11 root      RT   0     0    0    0 S  0.0  0.0 637280:21 migration/2        
+   13 root      20   0     0    0    0 S  0.0  0.0   6:51.67 ksoftirqd/2        
+   14 root      RT   0     0    0    0 S  0.0  0.0 626770:01 migration/3        
+   16 root      20   0     0    0    0 S  0.0  0.0   6:39.65 ksoftirqd/3        
+   17 root      RT   0     0    0    0 S  0.0  0.0 613283:55 migration/4        
+   19 root      20   0     0    0    0 S  0.0  0.0   6:34.85 ksoftirqd/4        
+   20 root      RT   0     0    0    0 S  0.0  0.0 571913:25 migration/5        
+   22 root      20   0     0    0    0 S  0.0  0.0   6:51.69 ksoftirqd/5        
+   23 root      RT   0     0    0    0 S  0.0  0.0 635019:35 migration/6        
+   25 root      20   0     0    0    0 S  0.0  0.0   6:06.47 ksoftirqd/6        
+   26 root      RT   0     0    0    0 S  0.0  0.0 633803:10 migration/7        
+   28 root      20   0     0    0    0 S  0.0  0.0   6:10.58 ksoftirqd/7        
+   29 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 cpuset             
+   30 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 khelper            
+   31 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 netns              
+  193 root      20   0     0    0    0 S  0.0  0.0   0:59.08 sync_supers        
+  195 root      20   0     0    0    0 S  0.0  0.0   0:02.41 bdi-default        
+  196 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kintegrityd        
+  198 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kblockd            
+  309 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ata_sff            
+  319 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khubd              
+  334 root      20   0     0    0    0 S  0.0  0.0  28:18.91 kworker/5:1        
+  508 root      20   0     0    0    0 S  0.0  0.0 697:11.53 kswapd0            
+  578 root      20   0     0    0    0 S  0.0  0.0   0:34.73 fsnotify_mark      
+  603 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 crypto             
+  742 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kpsmoused          
+  744 root      20   0     0    0    0 S  0.0  0.0  28:35.08 kworker/5:2        
+  752 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpathd            
+  753 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kmpath_handlerd    
+  810 postgres  10 -10  442m  15m  12m S  0.0  0.2   0:00.14 postmaster         
+  824 postgres  10 -10  433m 8196 6112 S  0.0  0.1   0:00.03 postmaster         
+  865 root      20   0     0    0    0 S  0.0  0.0   0:00.01 scsi_eh_0          
+  866 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_1          
+  867 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_0      
+  868 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_2          
+  869 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_2          
+  940 root       0 -20     0    0    0 S  0.0  0.0   0:00.10 lpfc_worker_1      
+  941 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_3          
+  942 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 scsi_wq_3          
+ 1018 postgres  10 -10  436m  11m 9404 S  0.0  0.1   0:00.06 postmaster         
+ 1019 postgres  10 -10  433m 7932 5848 S  0.0  0.1   0:00.03 postmaster         
+ 1020 postgres  10 -10  433m 7932 5852 S  0.0  0.1   0:00.03 postmaster         
+ 1023 postgres  10 -10  436m  46m  44m S  0.0  0.6   0:00.13 postmaster         
+ 1074 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1078 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1082 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1087 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1093 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1149 root      20   0     0    0    0 S  0.0  0.0   2:47.29 jbd2/dm-5-8        
+ 1150 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 ext4-dio-unwrit    
+ 1184 root      16  -4 12916  896  476 S  0.0  0.0   6:10.17 udevd              
+ 1474 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kauditd            
+ 1478 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kvm-irqfd-clean    
+ 1500 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+ 1598 root      20   0     0    0    0 S  0.0  0.0   0:00.06 kjournald          
+ 1599 root      20   0     0    0    0 S  0.0  0.0  11:16.36 kjournald          
+ 2205 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond0              
+ 2207 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond1              
+ 2600 postgres  10 -10  436m  45m  43m S  0.0  0.6   0:00.10 postmaster         
+ 2610 root      20   0     0    0    0 S  0.0  0.0   3:30.82 flush-254:5        
+ 2611 root      20   0     0    0    0 S  0.0  0.0   6:46.08 flush-254:7        
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.20 ntpd               
+ 2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
+ 2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.75 irqbalance         
+ 3101 postgres  10 -10  436m  37m  35m S  0.0  0.5   0:00.08 postmaster         
+ 3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
+ 3140 root      20   0     0    0    0 S  0.0  0.0   2:34.06 kworker/3:0        
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
+ 3147 root      20   0  399m 1184  720 S  0.0  0.0  13:45.10 slabd              
+ 3161 postgres  10 -10  442m  16m  13m S  0.0  0.2   0:00.08 postmaster         
+ 3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
+ 3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
+ 3234 root      20   0  6336  604  504 S  0.0  0.0   0:00.00 acpid              
+ 3251 root      39  19     0    0    0 S  0.0  0.0  18685:41 kipmi0             
+ 3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
+ 3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
+ 3417 root      20   0  691m 2632 2088 S  0.0  0.0  96:06.27 volman             
+ 3611 postgres  10 -10  442m  65m  62m S  0.0  0.8   0:01.66 postmaster         
+ 3625 postgres  10 -10  435m 9020 6888 S  0.0  0.1   0:00.03 postmaster         
+ 3626 postgres  10 -10  435m 8804 6688 S  0.0  0.1   0:00.03 postmaster         
+ 3627 postgres  10 -10  433m 7932 5908 S  0.0  0.1   0:00.03 postmaster         
+ 3761 postgres  10 -10  435m   9m 8044 S  0.0  0.1   0:00.12 postmaster         
+ 3762 postgres  10 -10  435m 9960 7780 S  0.0  0.1   0:00.06 postmaster         
+ 3818 root      20   0     0    0    0 D  0.0  0.0 278:40.85 kjournald          
+ 3946 root      20   0     0    0    0 S  0.0  0.0 209:53.60 kjournald          
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.44 postmaster         
+ 3973 postgres  10 -10  435m 258m 255m D  0.0  3.2 248:48.79 postmaster         
+ 3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  47:00.12 postmaster         
+ 3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:17.85 postmaster         
+ 3991 postgres  10 -10  435m 9068 6944 S  0.0  0.1   0:00.03 postmaster         
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
+ 4156 root      20   0  159m  712  484 S  0.0  0.0  12:02.19 squire             
+ 4157 root      20   0  159m  712  484 S  0.0  0.0  12:05.11 squire             
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
+ 4232 root      20   0  311m 1032  756 S  0.0  0.0  11:34.29 timelord           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4274 named     20   0  660m  29m  428 S  0.0  0.4   0:52.62 named              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
+ 4340 root      20   0 2155m 1.3g  764 S  0.0 17.1 247:06.22 sysmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
+ 4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
+ 4511 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd              
+ 4513 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4              
+ 4514 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 nfsd4_callbacks    
+ 4515 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4516 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4517 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4518 root      20   0     0    0    0 S  0.0  0.0   0:00.08 nfsd               
+ 4519 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4520 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4521 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4522 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd               
+ 4524 root      20   0 28160 1740  880 S  0.0  0.0   5:46.05 rpc.mountd         
+ 4526 rpcuser   20   0 23412 1140  728 S  0.0  0.0   0:00.05 rpc.statd          
+ 4537 root      20   0 14184 1800  988 S  0.0  0.0  30:48.51 keep_inodes        
+ 4548 root      20   0 10780 1212  892 S  0.0  0.0  20:30.99 watch              
+ 4549 root      20   0 13532 1000  780 S  0.0  0.0   0:00.00 monitor_shell      
+ 4554 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
+ 4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
+ 4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
+ 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
+ 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:18.46 java               
+ 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
+ 5425 postgres  10 -10  442m  20m  16m S  0.0  0.3   0:00.26 postmaster         
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
+ 5463 postgres  10 -10  442m  17m  13m S  0.0  0.2   0:00.09 postmaster         
+ 5464 postgres  10 -10  433m 8732 6604 S  0.0  0.1   0:00.03 postmaster         
+ 5465 postgres  10 -10  440m  12m 9652 S  0.0  0.2   0:00.03 postmaster         
+ 5466 postgres  10 -10  433m 8204 6120 S  0.0  0.1   0:00.02 postmaster         
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6961 root      20   0  315m 1128  736 S  0.0  0.0   8:19.95 risfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
+ 7024 root      20   0  315m  796  388 S  0.0  0.0   8:19.98 risfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
+ 7117 root      20   0  315m  768  404 S  0.0  0.0   8:24.32 risfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
+ 7181 root      20   0  315m  920  492 S  0.0  0.0   8:28.15 risfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 7225 root      20   0  116m 2308 1260 S  0.0  0.0   0:43.82 smbd               
+ 7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7448 root      20   0  246m 5332 1444 S  0.0  0.1 320:01.27 snmpd              
+ 7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.96 irqbalance         
+ 8244 postgres  10 -10  433m 8436 6352 S  0.0  0.1   0:00.01 postmaster         
+ 8401 postgres  10 -10  433m 8176 6092 S  0.0  0.1   0:00.01 postmaster         
+ 8873 postgres  10 -10  433m 7904 5820 S  0.0  0.1   0:00.00 postmaster         
+ 9258 root      20   0     0    0    0 S  0.0  0.0   0:07.56 kworker/7:1        
+10421 root      20   0     0    0    0 S  0.0  0.0   0:42.48 kworker/6:2        
+10471 postgres  10 -10  433m 8692 6560 S  0.0  0.1   0:00.03 postmaster         
+10472 postgres  10 -10  433m 8440 6356 S  0.0  0.1   0:00.01 postmaster         
+10477 postgres  10 -10  433m 8160 6076 S  0.0  0.1   0:00.00 postmaster         
+10619 postgres  10 -10  433m 8164 6080 S  0.0  0.1   0:00.00 postmaster         
+10761 postgres  10 -10  433m  36m  34m S  0.0  0.5   0:00.04 postmaster         
+10762 postgres  10 -10  433m  35m  33m S  0.0  0.4   0:00.04 postmaster         
+10954 root      20   0  4164  332  248 S  0.0  0.0   0:00.00 sleep              
+11073 root      20   0 41132 1520  904 S  0.0  0.0   0:00.00 crond              
+11074 root      20   0 11432 1460 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
+11092 root      20   0 11432  672  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
+11094 root      20   0 15132 1280  860 R  0.0  0.0   0:00.00 top                
+11984 root      20   0     0    0    0 S  0.0  0.0   0:00.02 kworker/u:1        
+14904 root      20   0     0    0    0 S  0.0  0.0   1:51.70 kworker/7:2        
+15002 root      20   0     0    0    0 S  0.0  0.0   2:03.29 kworker/3:1        
+16459 root      20   0     0    0    0 S  0.0  0.0   0:00.15 kworker/u:0        
+17534 root      20   0     0    0    0 S  0.0  0.0  13:00.58 kworker/0:2        
+17629 root      20   0     0    0    0 S  0.0  0.0  17:02.79 kworker/4:1        
+18448 root       0 -20     0    0    0 S  0.0  0.0   7:02.19 loop0              
+19143 root      18  -2 12808  908  528 S  0.0  0.0   0:03.86 udevd              
+19182 root      18  -2 12808  900  520 S  0.0  0.0   0:00.00 udevd              
+20332 root      20   0     0    0    0 S  0.0  0.0   1:53.70 kworker/6:1        
+20426 root      20   0     0    0    0 S  0.0  0.0  19:01.27 kworker/4:0        
+21332 root      20   0     0    0    0 S  0.0  0.0   0:17.30 kworker/2:2        
+21956 root      20   0     0    0    0 S  0.0  0.0   0:00.24 flush-254:9        
+23015 root      20   0     0    0    0 S  0.0  0.0   0:17.88 kworker/2:1        
+24658 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24660 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24663 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24840 root      RT   0  738m 4728 3336 S  0.0  0.1 111:25.35 multipathd         
+24882 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24884 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24889 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
+25111 root      20   0     0    0    0 S  0.0  0.0  23:48.81 kworker/1:3        
+27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
+30129 root      20   0  159m  716  484 S  0.0  0.0  10:47.96 squire             
+31299 postgres  10 -10  443m 120m 115m S  0.0  1.5   0:01.45 postmaster         
+31754 postgres  10 -10  443m  92m  87m S  0.0  1.2   0:06.93 postmaster         
+31812 postgres  10 -10  443m 117m 113m S  0.0  1.5   0:10.39 postmaster         
+31813 postgres  10 -10  442m  74m  71m S  0.0  0.9   0:00.88 postmaster         
+31814 postgres  10 -10  442m  43m  40m S  0.0  0.5   0:00.27 postmaster         
+31815 postgres  10 -10  442m  53m  49m S  0.0  0.7   0:00.25 postmaster         
+31816 postgres  10 -10  442m  92m  88m S  0.0  1.2   0:03.48 postmaster         
+31818 postgres  10 -10  442m  35m  31m S  0.0  0.4   0:00.64 postmaster         
+31819 postgres  10 -10  443m  95m  90m S  0.0  1.2   0:35.71 postmaster         
+31820 postgres  10 -10  443m  79m  74m S  0.0  1.0   0:18.98 postmaster         
+31821 postgres  10 -10  442m  28m  24m S  0.0  0.4   0:02.31 postmaster         
+31822 postgres  10 -10  442m  61m  57m S  0.0  0.8   0:01.50 postmaster         
+31823 postgres  10 -10  440m  17m  14m S  0.0  0.2   0:00.12 postmaster         
+31826 postgres  10 -10  442m  76m  72m S  0.0  1.0   0:00.17 postmaster         
+31828 postgres  10 -10  442m  25m  21m S  0.0  0.3   0:01.07 postmaster         
+31829 postgres  10 -10  440m  15m  12m S  0.0  0.2   0:00.10 postmaster         
+31830 postgres  10 -10  433m 8224 6232 S  0.0  0.1   0:00.04 postmaster         
+31832 postgres  10 -10  442m  18m  14m S  0.0  0.2   0:00.12 postmaster         
+31851 postgres  10 -10  442m  88m  85m S  0.0  1.1   0:23.79 postmaster         
+31856 postgres  10 -10  436m  71m  69m S  0.0  0.9   0:00.13 postmaster         
+31857 postgres  10 -10  436m  71m  68m S  0.0  0.9   0:00.13 postmaster         
+31872 postgres  10 -10  442m  17m  14m S  0.0  0.2   0:00.10 postmaster         
+31934 postgres  10 -10  442m  52m  47m S  0.0  0.7   0:00.38 postmaster         
+31943 postgres  10 -10  441m  54m  50m S  0.0  0.7   0:00.17 postmaster         
+32179 postgres  10 -10  442m  14m  10m S  0.0  0.2   0:00.06 postmaster         
+32305 postgres  10 -10  442m  17m  13m S  0.0  0.2   0:00.09 postmaster         
+32373 postgres  10 -10  442m  70m  66m S  0.0  0.9   0:03.62 postmaster         

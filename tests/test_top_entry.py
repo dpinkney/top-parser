@@ -93,6 +93,9 @@ class TopEntryTestCase(unittest.TestCase):
         line = '%Cpu(s):  100.1 us,  99.9 sy,  90.0 ni, 110.123 id,  111.222 wa,  333.444 hi,  100.100 si,  200.200 st'
         self.checkParseCpu(line, 100.1, 99.9, 90.0, 110.123, 111.222, 333.444, 100.100, 200.200)
 
+        line = 'Cpu(s):  2.1%us,  1.0%sy,  0.0%ni, 85.4%id, 11.5%wa,  0.0%hi,  0.1%si,  0.0%st'
+        self.checkParseCpu(line, 2.1, 1.0, 0.0, 85.4, 11.5, 0.0, 0.1, 0.0)
+
     def checkParseCpu(self, line, unniced, system, niced, idle, wait, hi, si, st):
         """
         Parse cpu info from the provided line, and verify that it parses
@@ -123,6 +126,9 @@ class TopEntryTestCase(unittest.TestCase):
         line = 'KiB Mem:  100 total, 200 used,   300 free,   400 buffers'
         self.checkParseMem(line, 100, 200, 300, 400)
 
+        line = 'Mem:   8170096k total,  7148836k used,  1021260k free,   337592k buffers'
+        self.checkParseMem(line, 8170096, 7148836, 1021260, 337592)
+
     def checkParseMem(self, line, total, used, free, buffers):
         """
         Parse mem info from the provided line, and verify that it parses
@@ -148,6 +154,9 @@ class TopEntryTestCase(unittest.TestCase):
 
         line = 'KiB Swap:  100 total, 200 used,   300 free,   400 cached'
         self.checkParseSwap(line, 100, 200, 300, 400)
+
+        line = 'Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached'
+        self.checkParseSwap(line, 3146748, 905060, 2241688, 1705700)
 
     def checkParseSwap(self, line, total, used, free, buffers):
         """

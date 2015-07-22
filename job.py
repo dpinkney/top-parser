@@ -24,9 +24,9 @@ class Job(object):
                             \s+(\w+)                 # user
                             \s+([-\w]+)              # priority
                             \s+([-\d]+)              # nice
-                            \s+(\d+|\d+[.\d]+\w?)    # memVirtual
-                            \s+(\d+|\d+[.\d]+\w?)    # memResident
-                            \s+(\d+|\d+[.\d]+\w?)    # memShared
+                            \s+(\d+|\d+[.\d]*\w?)    # memVirtual
+                            \s+(\d+|\d+[.\d]*\w?)    # memResident
+                            \s+(\d+|\d+[.\d]*\w?)    # memShared
                             \s+(\w+)                 # status
                             \s+([\d.]+)              # cpuPercent
                             \s+([\d.]+)              # memPercent
@@ -56,6 +56,7 @@ class Job(object):
         Sample input:
         '  662 root      20   0  273524  86820  17340 S   6.2  0.5 338:15.30 Xorg'
         '32469 dpinkney  20   0 3920412 2.403g  72804 S   6.2 15.4   2709:11 firefox'
+        ' 5199 postgres  10 -10  436m   9m 7904 S  0.0  0.1   0:00.05 postmaster   '
         """
         logger.debug("Parsing job '{0}'".format(line))
         match = self.RE_JOB.match(line)
@@ -73,7 +74,7 @@ class Job(object):
         self.info[self.JOB_CPU] = float(groups[8])
         self.info[self.JOB_MEM] = float(groups[9])
         self.info[self.JOB_TIME] = groups[10]
-        self.info[self.JOB_COMMAND] = groups[11]
+        self.info[self.JOB_COMMAND] = groups[11].strip()
 
 
     def parseScaledMem(self, resStr):
