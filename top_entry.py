@@ -53,7 +53,7 @@ class TopEntry(object):
     TASKS_SLEEPING = 'tasksSleeping'               # int
     TASKS_STOPPED = 'tasksStopped'                 # int
     TASKS_ZOMBIE = 'tasksZombie'                   # int
-    RE_TASKS = re.compile('^Tasks:\s+(\d+) total,\s+(\d+)\s+running,\s+(\d+)\s+sleeping,\s+(\d+)\s+stopped,\s+(\d+)\s+zombie')
+    RE_TASKS = re.compile('^(?:Tasks|Threads):\s+(\d+) total,\s+(\d+)\s+running,\s+(\d+)\s+sleeping,\s+(\d+)\s+stopped,\s+(\d+)\s+zombie')
 
     # CPU
     CPU_UNNICED = 'cpuUnNiced'                     # float

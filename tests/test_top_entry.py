@@ -65,6 +65,9 @@ class TopEntryTestCase(unittest.TestCase):
         line = 'Tasks: 123 total,   456 running, 789 sleeping,   321 stopped,   654 zombie'
         self.checkParseTasks(line, 123, 456, 789, 321, 654)
 
+        line = 'Threads: 1090 total,   1 running, 1082 sleeping,   0 stopped,   7 zombie'
+        self.checkParseTasks(line, 1090, 1, 1082, 0, 7)
+
     def checkParseTasks(self, line, numTotal, numRunning, numSleeping, numStopped, numZombie):
         """
         Parse task info from the provided line, and verify that it parses

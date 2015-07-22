@@ -6,8 +6,8 @@ Mem:   8170096k total,  7148836k used,  1021260k free,   337592k buffers
 Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached
 
   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
- 4408 ris       20   0 5289m 790m 3844 S  2.0  9.9  72552:27 java               
- 4717 storman   20   0 1582m 637m 1188 S  2.0  8.0  13193:21 storman            
+ 4408 rss       20   0 5289m 790m 3844 S  2.0  9.9  72552:27 java               
+ 4717 storage   20   0 1582m 637m 1188 S  2.0  8.0  13193:21 storage            
 15275 postgres  10 -10  443m 125m 120m S  2.0  1.6   0:11.99 postmaster         
 25054 root      20   0 15264 1304  860 R  2.0  0.0   0:00.01 top                
     1 root      20   0 21472 1100  748 S  0.0  0.0   0:02.33 init               
@@ -77,7 +77,7 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached
  2611 root      20   0     0    0    0 S  0.0  0.0   6:46.06 flush-254:7        
  2682 postgres  10 -10  443m 125m 120m S  0.0  1.6   0:12.37 postmaster         
  2683 postgres  10 -10  442m  61m  56m S  0.0  0.8   0:00.91 postmaster         
- 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 forward              
  2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.14 ntpd               
  2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
  2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.54 irqbalance         
@@ -85,8 +85,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached
  3069 postgres  10 -10  441m  15m  11m S  0.0  0.2   0:00.13 postmaster         
  3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
  3140 root      20   0     0    0    0 S  0.0  0.0   2:33.99 kworker/3:0        
- 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
- 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.08 slabd              
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 forward              
+ 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.08 slob              
  3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
  3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
  3234 root      20   0  6336  604  504 S  0.0  0.0   0:00.00 acpid              
@@ -95,30 +95,30 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached
  3283 postgres  10 -10  435m 9836 7640 S  0.0  0.1   0:00.06 postmaster         
  3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
  3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
- 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
- 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.08 volman             
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 forward              
+ 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.08 volumes             
  3506 postgres  10 -10  435m 9576 7380 S  0.0  0.1   0:00.05 postmaster         
  3570 postgres  10 -10  435m 9160 6968 S  0.0  0.1   0:00.04 postmaster         
  3818 root      20   0     0    0    0 S  0.0  0.0 278:37.76 kjournald          
  3946 root      20   0     0    0    0 S  0.0  0.0 209:51.08 kjournald          
- 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 teeth             
  3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.41 postmaster         
  3973 postgres  10 -10  435m 258m 255m S  0.0  3.2 248:47.80 postmaster         
  3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  46:59.99 postmaster         
  3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:16.34 postmaster         
- 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
- 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
- 4156 root      20   0  159m  728  500 S  0.0  0.0  12:02.17 squire             
- 4157 root      20   0  159m  728  500 S  0.0  0.0  12:05.08 squire             
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 teeth             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 teeth             
+ 4156 root      20   0  159m  728  500 S  0.0  0.0  12:02.17 knight             
+ 4157 root      20   0  159m  728  500 S  0.0  0.0  12:05.08 knight             
  4176 postgres  10 -10  443m  75m  69m S  0.0  0.9   0:02.85 postmaster         
  4226 postgres  10 -10  442m  57m  53m S  0.0  0.7   0:00.64 postmaster         
- 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
- 4232 root      20   0  311m 1044  768 S  0.0  0.0  11:34.27 timelord           
- 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 forward              
+ 4232 root      20   0  311m 1044  768 S  0.0  0.0  11:34.27 timed           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 forward              
  4274 named     20   0  660m  29m  464 S  0.0  0.4   0:52.62 named              
- 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
- 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.75 sysmon             
- 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 forward              
+ 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.75 statusmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 forward              
  4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
  4467 postgres  10 -10  443m  58m  53m S  0.0  0.7   0:00.74 postmaster         
  4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
@@ -143,31 +143,31 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached
  4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
  4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
  4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
- 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
- 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
- 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:17.71 java               
- 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 teeth             
+ 4796 rss       20   0 34288  732  456 S  0.0  0.0   0:00.00 teeth             
+ 4797 rss       20   0 4647m  49m 1900 S  0.0  0.6 339:17.71 java               
+ 4820 rss       20   0     0    0    0 Z  0.0  0.0   0:00.00 vanilla-solr <defunct> 
  5197 postgres  10 -10  442m  18m  14m S  0.0  0.2   0:00.22 postmaster         
  5198 postgres  10 -10  436m  10m 8224 S  0.0  0.1   0:00.05 postmaster         
  5199 postgres  10 -10  436m   9m 7904 S  0.0  0.1   0:00.05 postmaster         
  5300 postgres  10 -10  443m 109m 104m S  0.0  1.4   0:38.01 postmaster         
  5313 postgres  10 -10  440m  12m 9.8m S  0.0  0.2   0:00.06 postmaster         
- 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
- 5450 storman   20   0 1646m 749m 1176 S  0.0  9.4  14151:26 storman            
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 teeth             
+ 5450 storage   20   0 1646m 749m 1176 S  0.0  9.4  14151:26 storage            
  5519 postgres  10 -10  442m  68m  64m S  0.0  0.9   0:01.25 postmaster         
  6174 postgres  10 -10  442m 112m 107m S  0.0  1.4   0:00.40 postmaster         
- 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
- 6961 root      20   0  315m 1144  752 S  0.0  0.0   8:19.93 risfs              
- 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
- 7024 root      20   0  315m  812  404 S  0.0  0.0   8:19.96 risfs              
- 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
- 7117 root      20   0  315m  784  420 S  0.0  0.0   8:24.30 risfs              
- 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
- 7181 root      20   0  315m  936  508 S  0.0  0.0   8:28.13 risfs              
- 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
+ 6961 root      20   0  315m 1144  752 S  0.0  0.0   8:19.93 rssfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 forward              
+ 7024 root      20   0  315m  812  404 S  0.0  0.0   8:19.96 rssfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 forward              
+ 7117 root      20   0  315m  784  420 S  0.0  0.0   8:24.30 rssfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 forward              
+ 7181 root      20   0  315m  936  508 S  0.0  0.0   8:28.13 rssfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
  7225 root      20   0  116m 2316 1268 S  0.0  0.0   0:43.82 smbd               
  7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
- 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 forward              
  7448 root      20   0  246m 5340 1452 S  0.0  0.1 320:00.94 snmpd              
  7577 postgres  10 -10  443m 119m 113m S  0.0  1.5   0:01.55 postmaster         
  7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.77 irqbalance         
@@ -272,12 +272,12 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1705700k cached
 24889 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
 24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
 25032 root      20   0 41132 1520  904 S  0.0  0.0   0:00.00 crond              
-25034 root      20   0 11432 1460 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
-25052 root      20   0 11432  672  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
+25034 root      20   0 11432 1460 1184 S  0.0  0.0   0:00.00 dumpTop.sh      
+25052 root      20   0 11432  672  380 S  0.0  0.0   0:00.00 dumpTop.sh      
 25111 root      20   0     0    0    0 S  0.0  0.0  23:48.70 kworker/1:3        
 27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
-30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
-30129 root      20   0  159m  732  500 S  0.0  0.0  10:47.93 squire             
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 teeth             
+30129 root      20   0  159m  732  500 S  0.0  0.0  10:47.93 knight             
 
 
 
@@ -289,9 +289,9 @@ Mem:   8170096k total,  6932924k used,  1237172k free,   310652k buffers
 Swap:  3146748k total,   905060k used,  2241688k free,  1497536k cached
 
   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
- 4408 ris       20   0 5289m 787m 3840 S 11.1  9.9  72553:01 java               
+ 4408 rss       20   0 5289m 787m 3840 S 11.1  9.9  72553:01 java               
 15275 postgres  10 -10  443m 195m 190m R  7.4  2.5   0:20.46 postmaster         
- 4717 storman   20   0 1582m 637m 1184 S  1.9  8.0  13193:24 storman            
+ 4717 storage   20   0 1582m 637m 1184 S  1.9  8.0  13193:24 storage            
 14961 postgres  10 -10  442m 121m 117m S  1.9  1.5   0:08.58 postmaster         
 15189 postgres  10 -10  442m  61m  58m S  1.9  0.8   0:00.16 postmaster         
 15299 postgres  10 -10  441m  43m  40m S  1.9  0.5   0:00.10 postmaster         
@@ -364,7 +364,7 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1497536k cached
  2611 root      20   0     0    0    0 S  0.0  0.0   6:46.07 flush-254:7        
  2682 postgres  10 -10  443m 125m 120m S  0.0  1.6   0:12.38 postmaster         
  2683 postgres  10 -10  442m  61m  56m S  0.0  0.8   0:00.92 postmaster         
- 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 forward              
  2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.16 ntpd               
  2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
  2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.60 irqbalance         
@@ -372,8 +372,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1497536k cached
  3069 postgres  10 -10  441m  15m  11m R  0.0  0.2   0:00.14 postmaster         
  3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
  3140 root      20   0     0    0    0 S  0.0  0.0   2:34.01 kworker/3:0        
- 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
- 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.08 slabd              
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 forward              
+ 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.08 slob              
  3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
  3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
  3234 root      20   0  6336  604  504 S  0.0  0.0   0:00.00 acpid              
@@ -382,30 +382,30 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1497536k cached
  3283 postgres  10 -10  435m 9836 7640 S  0.0  0.1   0:00.07 postmaster         
  3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
  3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
- 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
- 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.13 volman             
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 forward              
+ 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.13 volumes             
  3506 postgres  10 -10  435m 9576 7380 S  0.0  0.1   0:00.06 postmaster         
  3570 postgres  10 -10  435m 9160 6968 S  0.0  0.1   0:00.05 postmaster         
  3818 root      20   0     0    0    0 S  0.0  0.0 278:38.10 kjournald          
  3946 root      20   0     0    0    0 S  0.0  0.0 209:51.38 kjournald          
- 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 teeth             
  3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.41 postmaster         
  3973 postgres  10 -10  435m 258m 255m S  0.0  3.2 248:48.05 postmaster         
  3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  47:00.03 postmaster         
  3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:16.58 postmaster         
- 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
- 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
- 4156 root      20   0  159m  724  496 S  0.0  0.0  12:02.17 squire             
- 4157 root      20   0  159m  724  496 S  0.0  0.0  12:05.09 squire             
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 teeth             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 teeth             
+ 4156 root      20   0  159m  724  496 S  0.0  0.0  12:02.17 knight             
+ 4157 root      20   0  159m  724  496 S  0.0  0.0  12:05.09 knight             
  4176 postgres  10 -10  443m  75m  69m S  0.0  0.9   0:02.86 postmaster         
  4226 postgres  10 -10  442m  57m  53m S  0.0  0.7   0:00.65 postmaster         
- 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
- 4232 root      20   0  311m 1036  760 S  0.0  0.0  11:34.28 timelord           
- 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 forward              
+ 4232 root      20   0  311m 1036  760 S  0.0  0.0  11:34.28 timed           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 forward              
  4274 named     20   0  660m  29m  428 S  0.0  0.4   0:52.62 named              
- 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
- 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.86 sysmon             
- 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 forward              
+ 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.86 statusmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 forward              
  4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
  4467 postgres  10 -10  443m  58m  53m S  0.0  0.7   0:00.76 postmaster         
  4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
@@ -430,31 +430,31 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1497536k cached
  4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
  4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
  4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
- 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
- 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
- 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:17.88 java               
- 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 teeth             
+ 4796 rss       20   0 34288  732  456 S  0.0  0.0   0:00.00 teeth             
+ 4797 rss       20   0 4647m  49m 1900 S  0.0  0.6 339:17.88 java               
+ 4820 rss       20   0     0    0    0 Z  0.0  0.0   0:00.00 vanilla-solr <defunct> 
  5197 postgres  10 -10  442m  18m  14m S  0.0  0.2   0:00.23 postmaster         
  5198 postgres  10 -10  436m  10m 8224 S  0.0  0.1   0:00.06 postmaster         
  5199 postgres  10 -10  436m   9m 7904 S  0.0  0.1   0:00.05 postmaster         
  5300 postgres  10 -10  443m 109m 104m S  0.0  1.4   0:38.03 postmaster         
  5313 postgres  10 -10  440m  12m 9.8m S  0.0  0.2   0:00.07 postmaster         
- 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
- 5450 storman   20   0 1646m 749m 1172 S  0.0  9.4  14151:30 storman            
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 teeth             
+ 5450 storage   20   0 1646m 749m 1172 S  0.0  9.4  14151:30 storage            
  5519 postgres  10 -10  442m  68m  64m S  0.0  0.9   0:01.25 postmaster         
  6174 postgres  10 -10  442m 112m 107m S  0.0  1.4   0:00.41 postmaster         
- 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
- 6961 root      20   0  315m 1136  744 S  0.0  0.0   8:19.93 risfs              
- 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
- 7024 root      20   0  315m  804  396 S  0.0  0.0   8:19.96 risfs              
- 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
- 7117 root      20   0  315m  776  412 S  0.0  0.0   8:24.31 risfs              
- 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
- 7181 root      20   0  315m  928  500 S  0.0  0.0   8:28.14 risfs              
- 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
+ 6961 root      20   0  315m 1136  744 S  0.0  0.0   8:19.93 rssfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 forward              
+ 7024 root      20   0  315m  804  396 S  0.0  0.0   8:19.96 rssfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 forward              
+ 7117 root      20   0  315m  776  412 S  0.0  0.0   8:24.31 rssfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 forward              
+ 7181 root      20   0  315m  928  500 S  0.0  0.0   8:28.14 rssfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
  7225 root      20   0  116m 2316 1268 S  0.0  0.0   0:43.82 smbd               
  7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
- 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 forward              
  7448 root      20   0  246m 5340 1452 S  0.0  0.1 320:01.02 snmpd              
  7577 postgres  10 -10  443m 119m 113m S  0.0  1.5   0:01.57 postmaster         
  7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.81 irqbalance         
@@ -557,10 +557,10 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1497536k cached
 27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
 29951 root      20   0  4164  332  248 S  0.0  0.0   0:00.00 sleep              
 30078 root      20   0 41132 1520  904 S  0.0  0.0   0:00.00 crond              
-30079 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
-30098 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
-30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
-30129 root      20   0  159m  728  496 S  0.0  0.0  10:47.94 squire             
+30079 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 dumpTop.sh      
+30098 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 dumpTop.sh      
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 teeth             
+30129 root      20   0  159m  728  496 S  0.0  0.0  10:47.94 knight             
 
 
 
@@ -572,10 +572,10 @@ Mem:   8170096k total,  7140528k used,  1029568k free,   346636k buffers
 Swap:  3146748k total,   905060k used,  2241688k free,  1908268k cached
 
   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
- 4408 ris       20   0 5289m 787m 3840 S 37.3  9.9  72553:35 java               
+ 4408 rss       20   0 5289m 787m 3840 S 37.3  9.9  72553:35 java               
 31816 postgres  10 -10  442m  57m  53m S 27.5  0.7   0:00.40 postmaster         
- 4717 storman   20   0 1582m 637m 1184 S  3.9  8.0  13193:28 storman            
- 5450 storman   20   0 1646m 749m 1172 S  3.9  9.4  14151:34 storman            
+ 4717 storage   20   0 1582m 637m 1184 S  3.9  8.0  13193:28 storage            
+ 5450 storage   20   0 1646m 749m 1172 S  3.9  9.4  14151:34 storage            
  2599 root      20   0 15132 1248  860 R  2.0  0.0   0:00.01 top                
  3818 root      20   0     0    0    0 S  2.0  0.0 278:38.65 kjournald          
  3946 root      20   0     0    0    0 S  2.0  0.0 209:51.93 kjournald          
@@ -649,44 +649,44 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1908268k cached
  2207 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bond1              
  2509 root      20   0  4164  336  248 S  0.0  0.0   0:00.00 sleep              
  2578 root      20   0 41132 1528  912 S  0.0  0.0   0:00.00 crond              
- 2580 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
- 2597 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
+ 2580 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 dumpTop.sh      
+ 2597 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 dumpTop.sh      
  2600 postgres  10 -10  433m 7932 5912 S  0.0  0.1   0:00.00 postmaster         
  2610 root      20   0     0    0    0 S  0.0  0.0   3:30.81 flush-254:5        
  2611 root      20   0     0    0    0 S  0.0  0.0   6:46.07 flush-254:7        
- 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 forward              
  2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.17 ntpd               
  2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
  2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.65 irqbalance         
  3033 root      20   0     0    0    0 S  0.0  0.0   0:06.68 flush-254:10       
  3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
  3140 root      20   0     0    0    0 S  0.0  0.0   2:34.03 kworker/3:0        
- 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
- 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.09 slabd              
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 forward              
+ 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.09 slob              
  3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
  3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
  3234 root      20   0  6336  604  504 S  0.0  0.0   0:00.00 acpid              
  3251 root      39  19     0    0    0 S  0.0  0.0  18685:24 kipmi0             
  3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
  3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
- 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
- 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.18 volman             
- 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 forward              
+ 3417 root      20   0  691m 2640 2096 S  0.0  0.0  96:06.18 volumes             
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 teeth             
  3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.42 postmaster         
  3973 postgres  10 -10  435m 258m 255m S  0.0  3.2 248:48.20 postmaster         
  3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  47:00.06 postmaster         
  3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:16.77 postmaster         
- 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
- 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
- 4156 root      20   0  159m  724  496 S  0.0  0.0  12:02.18 squire             
- 4157 root      20   0  159m  724  496 S  0.0  0.0  12:05.09 squire             
- 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
- 4232 root      20   0  311m 1036  760 S  0.0  0.0  11:34.28 timelord           
- 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 teeth             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 teeth             
+ 4156 root      20   0  159m  724  496 S  0.0  0.0  12:02.18 knight             
+ 4157 root      20   0  159m  724  496 S  0.0  0.0  12:05.09 knight             
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 forward              
+ 4232 root      20   0  311m 1036  760 S  0.0  0.0  11:34.28 timed           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 forward              
  4274 named     20   0  660m  29m  428 S  0.0  0.4   0:52.62 named              
- 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
- 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.99 sysmon             
- 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 forward              
+ 4340 root      20   0 2155m 1.3g  772 S  0.0 17.1 247:05.99 statusmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 forward              
  4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
  4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
  4511 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd              
@@ -710,23 +710,23 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1908268k cached
  4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
  4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
  4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
- 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
- 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
- 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:18.05 java               
- 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
- 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
- 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
- 6961 root      20   0  315m 1132  740 S  0.0  0.0   8:19.94 risfs              
- 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
- 7024 root      20   0  315m  800  392 S  0.0  0.0   8:19.98 risfs              
- 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
- 7117 root      20   0  315m  772  408 S  0.0  0.0   8:24.31 risfs              
- 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
- 7181 root      20   0  315m  924  496 S  0.0  0.0   8:28.14 risfs              
- 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 teeth             
+ 4796 rss       20   0 34288  732  456 S  0.0  0.0   0:00.00 teeth             
+ 4797 rss       20   0 4647m  49m 1900 S  0.0  0.6 339:18.05 java               
+ 4820 rss       20   0     0    0    0 Z  0.0  0.0   0:00.00 vanilla-solr <defunct> 
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 teeth             
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
+ 6961 root      20   0  315m 1132  740 S  0.0  0.0   8:19.94 rssfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 forward              
+ 7024 root      20   0  315m  800  392 S  0.0  0.0   8:19.98 rssfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 forward              
+ 7117 root      20   0  315m  772  408 S  0.0  0.0   8:24.31 rssfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 forward              
+ 7181 root      20   0  315m  924  496 S  0.0  0.0   8:28.14 rssfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
  7225 root      20   0  116m 2308 1260 S  0.0  0.0   0:43.82 smbd               
  7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
- 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 forward              
  7448 root      20   0  246m 5340 1452 S  0.0  0.1 320:01.11 snmpd              
  7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.87 irqbalance         
  9258 root      20   0     0    0    0 S  0.0  0.0   0:07.56 kworker/7:1        
@@ -755,8 +755,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1908268k cached
 24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
 25111 root      20   0     0    0    0 S  0.0  0.0  23:48.76 kworker/1:3        
 27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
-30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
-30129 root      20   0  159m  728  496 S  0.0  0.0  10:47.94 squire             
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 teeth             
+30129 root      20   0  159m  728  496 S  0.0  0.0  10:47.94 knight             
 31299 postgres  10 -10  443m  59m  54m S  0.0  0.7   0:00.47 postmaster         
 31754 postgres  10 -10  442m  23m  19m S  0.0  0.3   0:00.20 postmaster         
 31813 postgres  10 -10  442m  69m  66m S  0.0  0.9   0:00.60 postmaster         
@@ -792,10 +792,10 @@ Mem:   8170096k total,  7133204k used,  1036892k free,   367852k buffers
 Swap:  3146748k total,   905060k used,  2241688k free,  1818496k cached
 
   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
- 4408 ris       20   0 5289m 791m 3840 S 33.4  9.9  72554:41 java               
+ 4408 rss       20   0 5289m 791m 3840 S 33.4  9.9  72554:41 java               
 31819 postgres  10 -10  443m  72m  68m D 19.6  0.9   0:15.18 postmaster         
- 5450 storman   20   0 1648m 751m 1172 S  7.9  9.4  14151:39 storman            
- 4717 storman   20   0 1582m 637m 1184 S  2.0  8.0  13193:33 storman            
+ 5450 storage   20   0 1648m 751m 1172 S  7.9  9.4  14151:39 storage            
+ 4717 storage   20   0 1582m 637m 1184 S  2.0  8.0  13193:33 storage            
  5425 postgres  10 -10  442m  17m  13m S  2.0  0.2   0:00.15 postmaster         
  6346 root      20   0 15132 1268  860 R  2.0  0.0   0:00.01 top                
     1 root      20   0 21472 1100  748 S  0.0  0.0   0:02.33 init               
@@ -867,7 +867,7 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1818496k cached
  2600 postgres  10 -10  435m 9096 6964 S  0.0  0.1   0:00.02 postmaster         
  2610 root      20   0     0    0    0 S  0.0  0.0   3:30.82 flush-254:5        
  2611 root      20   0     0    0    0 S  0.0  0.0   6:46.07 flush-254:7        
- 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 forward              
  2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.18 ntpd               
  2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
  2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.69 irqbalance         
@@ -875,8 +875,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1818496k cached
  3101 postgres  10 -10  435m 8928 6804 S  0.0  0.1   0:00.01 postmaster         
  3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
  3140 root      20   0     0    0    0 S  0.0  0.0   2:34.04 kworker/3:0        
- 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
- 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.09 slabd              
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 forward              
+ 3147 root      20   0  399m 1180  716 S  0.0  0.0  13:45.09 slob              
  3161 postgres  10 -10  440m  13m  10m S  0.0  0.2   0:00.04 postmaster         
  3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
  3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
@@ -884,8 +884,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1818496k cached
  3251 root      39  19     0    0    0 S  0.0  0.0  18685:33 kipmi0             
  3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
  3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
- 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
- 3417 root      20   0  691m 2632 2088 S  0.0  0.0  96:06.22 volman             
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 forward              
+ 3417 root      20   0  691m 2632 2088 S  0.0  0.0  96:06.22 volumes             
  3611 postgres  10 -10  442m  65m  62m S  0.0  0.8   0:01.64 postmaster         
  3625 postgres  10 -10  435m 8764 6648 S  0.0  0.1   0:00.01 postmaster         
  3626 postgres  10 -10  433m 7932 5896 S  0.0  0.1   0:00.01 postmaster         
@@ -894,23 +894,23 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1818496k cached
  3762 postgres  10 -10  435m 8904 6780 S  0.0  0.1   0:00.01 postmaster         
  3818 root      20   0     0    0    0 S  0.0  0.0 278:39.76 kjournald          
  3946 root      20   0     0    0    0 S  0.0  0.0 209:52.76 kjournald          
- 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 teeth             
  3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.43 postmaster         
  3973 postgres  10 -10  435m 258m 255m S  0.0  3.2 248:48.44 postmaster         
  3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  47:00.09 postmaster         
  3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:17.30 postmaster         
  3991 postgres  10 -10  435m 8812 6696 S  0.0  0.1   0:00.01 postmaster         
- 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
- 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
- 4156 root      20   0  159m  712  484 S  0.0  0.0  12:02.18 squire             
- 4157 root      20   0  159m  712  484 S  0.0  0.0  12:05.10 squire             
- 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
- 4232 root      20   0  311m 1032  756 S  0.0  0.0  11:34.28 timelord           
- 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 teeth             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 teeth             
+ 4156 root      20   0  159m  712  484 S  0.0  0.0  12:02.18 knight             
+ 4157 root      20   0  159m  712  484 S  0.0  0.0  12:05.10 knight             
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 forward              
+ 4232 root      20   0  311m 1032  756 S  0.0  0.0  11:34.28 timed           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 forward              
  4274 named     20   0  660m  29m  428 S  0.0  0.4   0:52.62 named              
- 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
- 4340 root      20   0 2155m 1.3g  764 S  0.0 17.1 247:06.10 sysmon             
- 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 forward              
+ 4340 root      20   0 2155m 1.3g  764 S  0.0 17.1 247:06.10 statusmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 forward              
  4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
  4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
  4511 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd              
@@ -934,31 +934,31 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1818496k cached
  4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
  4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
  4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
- 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
- 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
- 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:18.25 java               
- 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
- 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 teeth             
+ 4796 rss       20   0 34288  732  456 S  0.0  0.0   0:00.00 teeth             
+ 4797 rss       20   0 4647m  49m 1900 S  0.0  0.6 339:18.25 java               
+ 4820 rss       20   0     0    0    0 Z  0.0  0.0   0:00.00 vanilla-solr <defunct> 
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 teeth             
  5463 postgres  10 -10  442m  15m  11m S  0.0  0.2   0:00.04 postmaster         
  5464 postgres  10 -10  433m 8204 6120 S  0.0  0.1   0:00.00 postmaster         
  5465 postgres  10 -10  433m 8204 6120 S  0.0  0.1   0:00.00 postmaster         
  5466 postgres  10 -10  433m 7940 5872 S  0.0  0.1   0:00.01 postmaster         
  6290 root      20   0  4164  332  248 S  0.0  0.0   0:00.00 sleep              
  6324 root      20   0 41132 1520  904 S  0.0  0.0   0:00.00 crond              
- 6326 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
- 6344 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
- 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
- 6961 root      20   0  315m 1128  736 S  0.0  0.0   8:19.94 risfs              
- 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
- 7024 root      20   0  315m  796  388 S  0.0  0.0   8:19.98 risfs              
- 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
- 7117 root      20   0  315m  768  404 S  0.0  0.0   8:24.31 risfs              
- 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
- 7181 root      20   0  315m  920  492 S  0.0  0.0   8:28.14 risfs              
- 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6326 root      20   0 11432 1456 1184 S  0.0  0.0   0:00.00 dumpTop.sh      
+ 6344 root      20   0 11432  668  380 S  0.0  0.0   0:00.00 dumpTop.sh      
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
+ 6961 root      20   0  315m 1128  736 S  0.0  0.0   8:19.94 rssfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 forward              
+ 7024 root      20   0  315m  796  388 S  0.0  0.0   8:19.98 rssfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 forward              
+ 7117 root      20   0  315m  768  404 S  0.0  0.0   8:24.31 rssfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 forward              
+ 7181 root      20   0  315m  920  492 S  0.0  0.0   8:28.14 rssfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
  7225 root      20   0  116m 2308 1260 S  0.0  0.0   0:43.82 smbd               
  7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
- 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 forward              
  7448 root      20   0  246m 5332 1444 S  0.0  0.1 320:01.19 snmpd              
  7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.92 irqbalance         
  9258 root      20   0     0    0    0 S  0.0  0.0   0:07.56 kworker/7:1        
@@ -987,8 +987,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1818496k cached
 24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
 25111 root      20   0     0    0    0 S  0.0  0.0  23:48.78 kworker/1:3        
 27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
-30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
-30129 root      20   0  159m  716  484 S  0.0  0.0  10:47.95 squire             
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 teeth             
+30129 root      20   0  159m  716  484 S  0.0  0.0  10:47.95 knight             
 31299 postgres  10 -10  443m  63m  57m S  0.0  0.8   0:00.90 postmaster         
 31754 postgres  10 -10  442m  29m  26m S  0.0  0.4   0:00.45 postmaster         
 31812 postgres  10 -10  443m 117m 113m S  0.0  1.5   0:10.29 postmaster         
@@ -1026,11 +1026,11 @@ Mem:   8170096k total,  7185476k used,   984620k free,   376800k buffers
 Swap:  3146748k total,   905060k used,  2241688k free,  1831392k cached
 
   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
- 4408 ris       20   0 5289m 787m 3840 S  7.8  9.9  72555:55 java               
+ 4408 rss       20   0 5289m 787m 3840 S  7.8  9.9  72555:55 java               
  3033 root      20   0     0    0    0 S  3.9  0.0   0:06.89 flush-254:10       
  4551 root      20   0 15196 1252  868 S  2.0  0.0   1884:56 top                
- 4717 storman   20   0 1582m 638m 1184 S  2.0  8.0  13193:38 storman            
- 5450 storman   20   0 1646m 749m 1172 S  2.0  9.4  14151:45 storman            
+ 4717 storage   20   0 1582m 638m 1184 S  2.0  8.0  13193:38 storage            
+ 5450 storage   20   0 1646m 749m 1172 S  2.0  9.4  14151:45 storage            
     1 root      20   0 21472 1100  748 S  0.0  0.0   0:02.33 init               
     2 root      20   0     0    0    0 S  0.0  0.0   0:06.92 kthreadd           
     3 root      20   0     0    0    0 S  0.0  0.0   7:17.67 ksoftirqd/0        
@@ -1100,15 +1100,15 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1831392k cached
  2600 postgres  10 -10  436m  45m  43m S  0.0  0.6   0:00.10 postmaster         
  2610 root      20   0     0    0    0 S  0.0  0.0   3:30.82 flush-254:5        
  2611 root      20   0     0    0    0 S  0.0  0.0   6:46.08 flush-254:7        
- 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 guard              
+ 2740 root      20   0 23580  880  656 S  0.0  0.0   0:00.00 forward              
  2753 root      20   0 26324 1516 1060 S  0.0  0.0  25:47.20 ntpd               
  2754 root      20   0  236m  844  496 S  0.0  0.0   3:22.10 rsyslogd           
  2885 root      20   0  9352  536  416 S  0.0  0.0 102:48.75 irqbalance         
  3101 postgres  10 -10  436m  37m  35m S  0.0  0.5   0:00.08 postmaster         
  3105 rpc       20   0 19032  880  632 S  0.0  0.0   2:53.46 rpcbind            
  3140 root      20   0     0    0    0 S  0.0  0.0   2:34.06 kworker/3:0        
- 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 guard              
- 3147 root      20   0  399m 1184  720 S  0.0  0.0  13:45.10 slabd              
+ 3144 root      20   0 25676  972  740 S  0.0  0.0   0:00.00 forward              
+ 3147 root      20   0  399m 1184  720 S  0.0  0.0  13:45.10 slob              
  3161 postgres  10 -10  442m  16m  13m S  0.0  0.2   0:00.08 postmaster         
  3187 rpcuser   20   0 23396 1012  720 S  0.0  0.0   0:00.00 rpc.statd          
  3200 dbus      20   0 23516  396  192 S  0.0  0.0   0:00.00 dbus-daemon        
@@ -1116,8 +1116,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1831392k cached
  3251 root      39  19     0    0    0 S  0.0  0.0  18685:41 kipmi0             
  3286 root      20   0 75088  820  336 S  0.0  0.0   0:00.05 sshd               
  3303 root      20   0 75088  748  284 S  0.0  0.0   0:00.01 sshd               
- 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 guard              
- 3417 root      20   0  691m 2632 2088 S  0.0  0.0  96:06.27 volman             
+ 3413 root      20   0 25676  980  740 S  0.0  0.0   0:00.00 forward              
+ 3417 root      20   0  691m 2632 2088 S  0.0  0.0  96:06.27 volumes             
  3611 postgres  10 -10  442m  65m  62m S  0.0  0.8   0:01.66 postmaster         
  3625 postgres  10 -10  435m 9020 6888 S  0.0  0.1   0:00.03 postmaster         
  3626 postgres  10 -10  435m 8804 6688 S  0.0  0.1   0:00.03 postmaster         
@@ -1126,23 +1126,23 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1831392k cached
  3762 postgres  10 -10  435m 9960 7780 S  0.0  0.1   0:00.06 postmaster         
  3818 root      20   0     0    0    0 D  0.0  0.0 278:40.85 kjournald          
  3946 root      20   0     0    0    0 S  0.0  0.0 209:53.60 kjournald          
- 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 tether             
+ 3950 postgres  10 -10 34288  548  456 S  0.0  0.0   0:00.00 teeth             
  3951 postgres  10 -10  432m 8488 7984 S  0.0  0.1  16:07.44 postmaster         
  3973 postgres  10 -10  435m 258m 255m D  0.0  3.2 248:48.79 postmaster         
  3974 postgres  10 -10  432m 1152  584 S  0.0  0.0  47:00.12 postmaster         
  3975 postgres  10 -10  173m 1352  412 S  0.0  0.0 224:17.85 postmaster         
  3991 postgres  10 -10  435m 9068 6944 S  0.0  0.1   0:00.03 postmaster         
- 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 tether             
- 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 tether             
- 4156 root      20   0  159m  712  484 S  0.0  0.0  12:02.19 squire             
- 4157 root      20   0  159m  712  484 S  0.0  0.0  12:05.11 squire             
- 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 guard              
- 4232 root      20   0  311m 1032  756 S  0.0  0.0  11:34.29 timelord           
- 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 guard              
+ 4154 root      20   0 34288  676  444 S  0.0  0.0   0:00.00 teeth             
+ 4155 root      20   0 34288  656  444 S  0.0  0.0   0:00.00 teeth             
+ 4156 root      20   0  159m  712  484 S  0.0  0.0  12:02.19 knight             
+ 4157 root      20   0  159m  712  484 S  0.0  0.0  12:05.11 knight             
+ 4228 root      20   0 25676  952  740 S  0.0  0.0   0:00.00 forward              
+ 4232 root      20   0  311m 1032  756 S  0.0  0.0  11:34.29 timed           
+ 4271 root      20   0 25676 1020  740 S  0.0  0.0   0:00.00 forward              
  4274 named     20   0  660m  29m  428 S  0.0  0.4   0:52.62 named              
- 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 guard              
- 4340 root      20   0 2155m 1.3g  764 S  0.0 17.1 247:06.22 sysmon             
- 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 guard              
+ 4336 root      20   0 25676 1004  740 S  0.0  0.0   0:00.00 forward              
+ 4340 root      20   0 2155m 1.3g  764 S  0.0 17.1 247:06.22 statusmon             
+ 4396 root      20   0 42072 1044  740 S  0.0  0.0   4:45.67 forward              
  4444 root      20   0 20372 1168  656 S  0.0  0.0   2:30.60 crond              
  4502 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 rpciod             
  4511 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd              
@@ -1165,28 +1165,28 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1831392k cached
  4556 root      20   0  4140  552  476 S  0.0  0.0   0:00.00 mingetty           
  4558 root      20   0  4140  556  476 S  0.0  0.0   0:00.00 mingetty           
  4560 root      20   0  4140  560  476 S  0.0  0.0   0:00.00 mingetty           
- 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 tether             
- 4796 ris       20   0 34288  732  456 S  0.0  0.0   0:00.00 tether             
- 4797 ris       20   0 4647m  49m 1900 S  0.0  0.6 339:18.46 java               
- 4820 ris       20   0     0    0    0 Z  0.0  0.0   0:00.00 vol-solr <defunct> 
+ 4716 root      20   0 34288  684  444 S  0.0  0.0   0:00.00 teeth             
+ 4796 rss       20   0 34288  732  456 S  0.0  0.0   0:00.00 teeth             
+ 4797 rss       20   0 4647m  49m 1900 S  0.0  0.6 339:18.46 java               
+ 4820 rss       20   0     0    0    0 Z  0.0  0.0   0:00.00 vanilla-solr <defunct> 
  5425 postgres  10 -10  442m  20m  16m S  0.0  0.3   0:00.26 postmaster         
- 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 tether             
+ 5449 root      20   0 34288  728  436 S  0.0  0.0   0:00.00 teeth             
  5463 postgres  10 -10  442m  17m  13m S  0.0  0.2   0:00.09 postmaster         
  5464 postgres  10 -10  433m 8732 6604 S  0.0  0.1   0:00.03 postmaster         
  5465 postgres  10 -10  440m  12m 9652 S  0.0  0.2   0:00.03 postmaster         
  5466 postgres  10 -10  433m 8204 6120 S  0.0  0.1   0:00.02 postmaster         
- 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
- 6961 root      20   0  315m 1128  736 S  0.0  0.0   8:19.95 risfs              
- 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 guard              
- 7024 root      20   0  315m  796  388 S  0.0  0.0   8:19.98 risfs              
- 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 guard              
- 7117 root      20   0  315m  768  404 S  0.0  0.0   8:24.32 risfs              
- 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 guard              
- 7181 root      20   0  315m  920  492 S  0.0  0.0   8:28.15 risfs              
- 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 guard              
+ 6960 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
+ 6961 root      20   0  315m 1128  736 S  0.0  0.0   8:19.95 rssfs              
+ 7023 root      20   0 25676 1060  740 S  0.0  0.0   0:00.00 forward              
+ 7024 root      20   0  315m  796  388 S  0.0  0.0   8:19.98 rssfs              
+ 7116 root      20   0 25676 1048  740 S  0.0  0.0   0:00.00 forward              
+ 7117 root      20   0  315m  768  404 S  0.0  0.0   8:24.32 rssfs              
+ 7180 root      20   0 25676 1008  740 S  0.0  0.0   0:00.00 forward              
+ 7181 root      20   0  315m  920  492 S  0.0  0.0   8:28.15 rssfs              
+ 7224 root      20   0 25676 1024  740 S  0.0  0.0   0:00.00 forward              
  7225 root      20   0  116m 2308 1260 S  0.0  0.0   0:43.82 smbd               
  7255 root      20   0  116m 1480  460 S  0.0  0.0   0:00.09 smbd               
- 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 guard              
+ 7447 root      20   0 25676 1040  740 S  0.0  0.0   0:00.00 forward              
  7448 root      20   0  246m 5332 1444 S  0.0  0.1 320:01.27 snmpd              
  7592 root      20   0  9352  524  416 S  0.0  0.0  84:51.96 irqbalance         
  8244 postgres  10 -10  433m 8436 6352 S  0.0  0.1   0:00.01 postmaster         
@@ -1202,8 +1202,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1831392k cached
 10762 postgres  10 -10  433m  35m  33m S  0.0  0.4   0:00.04 postmaster         
 10954 root      20   0  4164  332  248 S  0.0  0.0   0:00.00 sleep              
 11073 root      20   0 41132 1520  904 S  0.0  0.0   0:00.00 crond              
-11074 root      20   0 11432 1460 1184 S  0.0  0.0   0:00.00 arc-runTop.sh      
-11092 root      20   0 11432  672  380 S  0.0  0.0   0:00.00 arc-runTop.sh      
+11074 root      20   0 11432 1460 1184 S  0.0  0.0   0:00.00 dumpTop.sh      
+11092 root      20   0 11432  672  380 S  0.0  0.0   0:00.00 dumpTop.sh      
 11094 root      20   0 15132 1280  860 R  0.0  0.0   0:00.00 top                
 11984 root      20   0     0    0    0 S  0.0  0.0   0:00.02 kworker/u:1        
 14904 root      20   0     0    0    0 S  0.0  0.0   1:51.70 kworker/7:2        
@@ -1229,8 +1229,8 @@ Swap:  3146748k total,   905060k used,  2241688k free,  1831392k cached
 24892 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kdmflush           
 25111 root      20   0     0    0    0 S  0.0  0.0  23:48.81 kworker/1:3        
 27309 root      20   0     0    0    0 S  0.0  0.0  14:37.80 kworker/1:1        
-30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 tether             
-30129 root      20   0  159m  716  484 S  0.0  0.0  10:47.96 squire             
+30128 root      20   0 34288  684  436 S  0.0  0.0   0:00.00 teeth             
+30129 root      20   0  159m  716  484 S  0.0  0.0  10:47.96 knight             
 31299 postgres  10 -10  443m 120m 115m S  0.0  1.5   0:01.45 postmaster         
 31754 postgres  10 -10  443m  92m  87m S  0.0  1.2   0:06.93 postmaster         
 31812 postgres  10 -10  443m 117m 113m S  0.0  1.5   0:10.39 postmaster         

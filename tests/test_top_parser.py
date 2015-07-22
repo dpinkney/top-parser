@@ -19,6 +19,7 @@ class TopParserTestCase(unittest.TestCase):
         self.checkTopParser('data/topOneEntryNoDate.log', 1, self.getOrdinalDateFromUptimeDays(28))
         self.checkTopParser('data/top_30sec_20iter.log', 20, self.getOrdinalDateFromUptimeDays(27))
         self.checkTopParser('data/topFiveEntriesWithDate.log', 5, datetime.date(datetime.date.today().year, 5, 26).toordinal())
+        self.checkTopParser('data/topTwoEntriesWithDate.log', 2, datetime.date(datetime.date.today().year, 3, 29).toordinal())
 
     def getOrdinalDateFromUptimeDays(self, uptimeDays):
         topEntry = TopEntry()
